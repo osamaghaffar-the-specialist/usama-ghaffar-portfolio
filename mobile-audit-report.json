@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "about.html",
+    "blog.html",
+    "contact.html",
+    "index.html",
+    "performance-marketing.html",
+    "services.html"
+  ],
+  "internal_links_checked": 164,
+  "link_issues": [],
+  "asset_issues": [],
+  "total_html_bytes": 597456,
+  "total_asset_bytes": 563682,
+  "page_sizes": {
+    "services.html": 114876,
+    "contact.html": 78048,
+    "about.html": 55020,
+    "performance-marketing.html": 104240,
+    "index.html": 158861,
+    "blog.html": 86411
+  },
+  "mobile_viewports_reviewed": [
+    320,
+    360,
+    390,
+    430,
+    768
+  ],
+  "desktop_viewports_reviewed": [
+    1024,
+    1440
+  ],
+  "notes": [
+    "Horizontal document width is clamped on all pages.",
+    "Intentional off-canvas navigation and marquee tracks remain inside overflow-hidden containers.",
+    "Web3Forms integration preserved on contact page.",
+    "Hero and mini bee animations preserved; offscreen rendering is paused where supported."
+  ],
+  "speed_optimizations": [
+    "All embedded proof images externalized into compressed WebP assets.",
+    "Below-the-fold images use lazy loading and async decoding.",
+    "Mobile backdrop-filter effects reduced to lower GPU cost.",
+    "Below-the-fold sections use content-visibility where supported.",
+    "Animation delays shortened and offscreen animated canvases paused.",
+    "Three.js no longer blocks parsing after the hero; an instant bee poster preserves the visual immediately.",
+    "Mobile canvas pixel ratio is capped to reduce GPU and memory usage."
+  ],
+  "viewport_audit": {
+    "document_horizontal_overflow_passed": 42,
+    "document_horizontal_overflow_total": 42,
+    "widths": [
+      320,
+      360,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  "limitations": "A real Lighthouse/PageSpeed score requires the deployed HTTPS URL and varies by hosting latency, device, network, browser cache and third-party CDN response. A guaranteed 100/100 cannot be asserted from local static analysis."
+}
