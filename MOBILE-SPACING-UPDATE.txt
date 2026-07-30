@@ -1,0 +1,18 @@
+USAMA GHAFFAR — MOBILE SPACING OVERHAUL
+
+Updated all six pages with a shared mobile content lane and page-specific panel spacing.
+
+Core rules:
+- Standard mobile page gutter: 20px per side (16px on screens <= 360px).
+- Large glass/surface panels: 24–26px internal horizontal padding.
+- Nested cards: 18–22px internal horizontal padding.
+- Mobile headings use tighter responsive sizes and balanced line wrapping.
+- Existing animations, links, Web3Forms integration and assets are preserved.
+
+Pages updated:
+- index.html
+- services.html
+- performance-marketing.html
+- about.html
+- contact.html
+- blog.html

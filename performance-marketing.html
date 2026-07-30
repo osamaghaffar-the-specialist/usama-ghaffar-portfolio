@@ -183,6 +183,46 @@ img,svg,canvas{max-width:100%}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(max-width:820px){.proof-strip-marquee{overflow:hidden!important}.proof-strip-track{will-change:transform}.proof-stat{flex-basis:190px!important}.case-layout,.proof-layout{min-width:0}.proof-frame img{width:100%!important;height:auto!important;object-fit:contain!important}.graph-shine{display:none!important}}@media(max-width:360px){.hero-graph-card{border-radius:24px!important}.metric-grid,.metric-grid.five{grid-template-columns:1fr!important}}</style>
+
+<style id="mobile-spacing-overhaul">
+/* Mobile content lane and edge-spacing overhaul */
+@media (max-width:820px){
+  :root{--mobile-gutter:20px;--mobile-panel-x:26px;--mobile-card-x:22px}
+  html,body{width:100%;max-width:100%;overflow-x:clip}
+  .wrap{width:calc(100% - (var(--mobile-gutter) * 2))!important;max-width:1240px!important;margin-inline:auto!important;padding-inline:0!important}
+  .hero-grid{max-width:calc(100% - (var(--mobile-gutter) * 2));margin-inline:auto}
+  header{padding-left:14px!important;padding-right:14px!important}
+  .header-shell,.header-inner{max-width:100%!important;margin-inline:auto!important}
+  main :where(h1,h2,h3,p,li,summary,strong,span){overflow-wrap:break-word}
+  main :where(.section-head,.ug-section-head){min-width:0}
+  main :where(.section-head h2,.ug-section-head h2){text-wrap:balance}
+  footer .wrap{width:calc(100% - (var(--mobile-gutter) * 2))!important}
+}
+@media (max-width:480px){
+  :root{--mobile-gutter:20px;--mobile-panel-x:24px;--mobile-card-x:21px}
+  main h1{font-size:clamp(2.32rem,10.4vw,2.65rem)!important;line-height:1.08!important;letter-spacing:-.04em!important;text-wrap:balance}
+  main :where(.section-head h2,.ug-section-head h2,.faq-intro h2,.results-copy h2,.fit-copy h2,.featured-copy h2,.editorial-copy h2,.brief-intro h2,.next-copy h2){font-size:clamp(1.82rem,8vw,2.15rem)!important;line-height:1.14!important;letter-spacing:-.03em!important;text-wrap:balance}
+}
+@media (max-width:360px){
+  :root{--mobile-gutter:16px;--mobile-panel-x:20px;--mobile-card-x:18px}
+  main h1{font-size:clamp(2.12rem,10vw,2.35rem)!important}
+}
+</style>
+
+<style id="portfolio-mobile-spacing">
+@media(max-width:850px){
+  .surface{padding:38px var(--mobile-panel-x)!important}
+  .case-details{padding:28px var(--mobile-panel-x)!important}
+  .detail-card,.insight-card,.metric-card,.system-card{padding-left:var(--mobile-card-x)!important;padding-right:var(--mobile-card-x)!important}
+  .cta-panel{padding:40px var(--mobile-panel-x)!important}
+}
+@media(max-width:560px){
+  .case-details{padding:26px var(--mobile-panel-x)!important;border-radius:24px!important}
+  .detail-card,.insight-card{padding:23px var(--mobile-card-x)!important}
+  .metric-card{padding:20px var(--mobile-card-x)!important}
+  .proof-frame{width:100%;max-width:100%}
+}
+</style>
 </head>
 <body>
 <div aria-hidden="true" id="scrollProgress"></div>

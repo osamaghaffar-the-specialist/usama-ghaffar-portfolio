@@ -1,0 +1,4658 @@
+[
+  {
+    "page": "index.html",
+    "width": 320,
+    "metrics": {
+      "sw": 320,
+      "cw": 320,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "header-bg",
+          "id": "",
+          "left": -10,
+          "right": 330,
+          "width": 340
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item active",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-cta",
+          "id": "",
+          "left": 345,
+          "right": 571,
+          "width": 226
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 640,
+          "width": 640
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 640,
+          "width": 640
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 640,
+          "width": 640
+        },
+        {
+          "tag": "g",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 39,
+          "right": 601,
+          "width": 561
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 359,
+          "right": 361,
+          "width": 1
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 439,
+          "right": 441,
+          "width": 1
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 519,
+          "right": 521,
+          "width": 1
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 599,
+          "right": 601,
+          "width": 1
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-track",
+          "id": "",
+          "left": 0,
+          "right": 1368,
+          "width": 1368
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge hub-bg",
+          "id": "",
+          "left": 315,
+          "right": 369,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 315,
+          "right": 369,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 315,
+          "right": 369,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 307,
+          "right": 377,
+          "width": 69
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge ghl-bg",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 367,
+          "right": 469,
+          "width": 102
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 442,
+          "right": 546,
+          "width": 103
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        }
+      ],
+      "badCount": 88,
+      "small": [
+        {
+          "tag": "A",
+          "text": "USAMA GHAFFAR",
+          "w": 71,
+          "h": 40
+        },
+        {
+          "tag": "A",
+          "text": "X",
+          "w": 9,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 11057
+    }
+  },
+  {
+    "page": "index.html",
+    "width": 390,
+    "metrics": {
+      "sw": 390,
+      "cw": 390,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "header-bg",
+          "id": "",
+          "left": -10,
+          "right": 400,
+          "width": 410
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item active",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-cta",
+          "id": "",
+          "left": 415,
+          "right": 686,
+          "width": 271
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 780,
+          "width": 780
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 780,
+          "width": 780
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 780,
+          "width": 780
+        },
+        {
+          "tag": "g",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 48,
+          "right": 732,
+          "width": 684
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 438,
+          "right": 440,
+          "width": 2
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 535,
+          "right": 537,
+          "width": 2
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 633,
+          "right": 635,
+          "width": 2
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 730,
+          "right": 732,
+          "width": 2
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-track",
+          "id": "",
+          "left": 0,
+          "right": 1368,
+          "width": 1368
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge ghl-bg",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 367,
+          "right": 469,
+          "width": 102
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 442,
+          "right": 546,
+          "width": 103
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 548,
+          "right": 592,
+          "width": 43
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 619,
+          "right": 673,
+          "width": 54
+        }
+      ],
+      "badCount": 78,
+      "small": [
+        {
+          "tag": "A",
+          "text": "USAMA GHAFFAR",
+          "w": 71,
+          "h": 40
+        },
+        {
+          "tag": "A",
+          "text": "X",
+          "w": 9,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 10832
+    }
+  },
+  {
+    "page": "index.html",
+    "width": 430,
+    "metrics": {
+      "sw": 430,
+      "cw": 430,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "header-bg",
+          "id": "",
+          "left": -10,
+          "right": 440,
+          "width": 450
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item active",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-cta",
+          "id": "",
+          "left": 455,
+          "right": 726,
+          "width": 271
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 860,
+          "width": 860
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 860,
+          "width": 860
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 860,
+          "width": 860
+        },
+        {
+          "tag": "g",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 53,
+          "right": 807,
+          "width": 754
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 483,
+          "right": 485,
+          "width": 2
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 590,
+          "right": 592,
+          "width": 2
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 698,
+          "right": 700,
+          "width": 2
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 805,
+          "right": 807,
+          "width": 2
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-track",
+          "id": "",
+          "left": 0,
+          "right": 1368,
+          "width": 1368
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge ghl-bg",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 391,
+          "right": 445,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 367,
+          "right": 469,
+          "width": 102
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 467,
+          "right": 521,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 442,
+          "right": 546,
+          "width": 103
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 543,
+          "right": 597,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 548,
+          "right": 592,
+          "width": 43
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 619,
+          "right": 673,
+          "width": 54
+        }
+      ],
+      "badCount": 78,
+      "small": [
+        {
+          "tag": "A",
+          "text": "USAMA GHAFFAR",
+          "w": 71,
+          "h": 40
+        },
+        {
+          "tag": "A",
+          "text": "X",
+          "w": 9,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 10850
+    }
+  },
+  {
+    "page": "index.html",
+    "width": 768,
+    "metrics": {
+      "sw": 768,
+      "cw": 768,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "header-bg",
+          "id": "",
+          "left": -10,
+          "right": 778,
+          "width": 788
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item active",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-item",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "A",
+          "cls": "mobile-menu-cta",
+          "id": "",
+          "left": 793,
+          "right": 1064,
+          "width": 271
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 1536,
+          "width": 1536
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 1536,
+          "width": 1536
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 1536,
+          "width": 1536
+        },
+        {
+          "tag": "g",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 94,
+          "right": 1442,
+          "width": 1347
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 862,
+          "right": 866,
+          "width": 3
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 1054,
+          "right": 1058,
+          "width": 3
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 1246,
+          "right": 1250,
+          "width": 3
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 1438,
+          "right": 1442,
+          "width": 3
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-track",
+          "id": "",
+          "left": 0,
+          "right": 1368,
+          "width": 1368
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 771,
+          "right": 825,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 771,
+          "right": 825,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 771,
+          "right": 825,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 752,
+          "right": 844,
+          "width": 93
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 847,
+          "right": 901,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 847,
+          "right": 901,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 847,
+          "right": 901,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 844,
+          "right": 904,
+          "width": 61
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 923,
+          "right": 977,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 923,
+          "right": 977,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 923,
+          "right": 977,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 906,
+          "right": 994,
+          "width": 87
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge hub-bg",
+          "id": "",
+          "left": 999,
+          "right": 1053,
+          "width": 54
+        }
+      ],
+      "badCount": 54,
+      "small": [
+        {
+          "tag": "A",
+          "text": "USAMA GHAFFAR",
+          "w": 128,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "text": "X",
+          "w": 9,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 10438
+    }
+  },
+  {
+    "page": "index.html",
+    "width": 1440,
+    "metrics": {
+      "sw": 1440,
+      "cw": 1440,
+      "bad": [
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 2880,
+          "width": 2880
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 2880,
+          "width": 2880
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 0,
+          "right": 2880,
+          "width": 2880
+        },
+        {
+          "tag": "g",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 177,
+          "right": 2703,
+          "width": 2526
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 1617,
+          "right": 1623,
+          "width": 6
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 1977,
+          "right": 1983,
+          "width": 6
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 2337,
+          "right": 2343,
+          "width": 6
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "id": "",
+          "left": 2697,
+          "right": 2703,
+          "width": 6
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-track",
+          "id": "",
+          "left": 0,
+          "right": 1548,
+          "width": 1548
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 1392,
+          "right": 1446,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 1392,
+          "right": 1446,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 1392,
+          "right": 1446,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "trusted-logo-badge",
+          "id": "",
+          "left": 1478,
+          "right": 1532,
+          "width": 54
+        },
+        {
+          "tag": "DIV",
+          "cls": "img-wrap",
+          "id": "",
+          "left": 1478,
+          "right": 1532,
+          "width": 54
+        },
+        {
+          "tag": "IMG",
+          "cls": "",
+          "id": "",
+          "left": 1478,
+          "right": 1532,
+          "width": 54
+        },
+        {
+          "tag": "SPAN",
+          "cls": "logo-name",
+          "id": "",
+          "left": 1488,
+          "right": 1522,
+          "width": 34
+        },
+        {
+          "tag": "DIV",
+          "cls": "case-shine",
+          "id": "",
+          "left": -313,
+          "right": 288,
+          "width": 601
+        },
+        {
+          "tag": "DIV",
+          "cls": "case-shine",
+          "id": "",
+          "left": -108,
+          "right": 477,
+          "width": 585
+        }
+      ],
+      "badCount": 18,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 76,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Check Your Growth Fit\n\u2197",
+          "w": 195,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "USAMA GHAFFAR",
+          "w": 136,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "SaaS Development",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Automations",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About Us",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "hello@usamaghaffar.com",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Book a Call",
+          "w": 240,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 49,
+          "h": 16
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 58,
+          "h": 16
+        },
+        {
+          "tag": "A",
+          "text": "X",
+          "w": 9,
+          "h": 16
+        }
+      ],
+      "smallCount": 17,
+      "height": 10320
+    }
+  },
+  {
+    "page": "services.html",
+    "width": 320,
+    "metrics": {
+      "sw": 320,
+      "cw": 320,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "system-glow",
+          "id": "",
+          "left": -8,
+          "right": 328,
+          "width": 335
+        },
+        {
+          "tag": "DIV",
+          "cls": "orbit one",
+          "id": "",
+          "left": -2,
+          "right": 322,
+          "width": 324
+        },
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb a",
+          "id": "",
+          "left": -205,
+          "right": 185,
+          "width": 390
+        },
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb b",
+          "id": "",
+          "left": 140,
+          "right": 460,
+          "width": 320
+        }
+      ],
+      "badCount": 4,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 12753
+    }
+  },
+  {
+    "page": "services.html",
+    "width": 390,
+    "metrics": {
+      "sw": 390,
+      "cw": 390,
+      "bad": [
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb a",
+          "id": "",
+          "left": -205,
+          "right": 185,
+          "width": 390
+        },
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb b",
+          "id": "",
+          "left": 210,
+          "right": 530,
+          "width": 320
+        }
+      ],
+      "badCount": 2,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 12583
+    }
+  },
+  {
+    "page": "services.html",
+    "width": 430,
+    "metrics": {
+      "sw": 430,
+      "cw": 430,
+      "bad": [
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb a",
+          "id": "",
+          "left": -205,
+          "right": 185,
+          "width": 390
+        },
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb b",
+          "id": "",
+          "left": 250,
+          "right": 570,
+          "width": 320
+        }
+      ],
+      "badCount": 2,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 12545
+    }
+  },
+  {
+    "page": "services.html",
+    "width": 768,
+    "metrics": {
+      "sw": 768,
+      "cw": 768,
+      "bad": [
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb a",
+          "id": "",
+          "left": -203,
+          "right": 187,
+          "width": 390
+        },
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb b",
+          "id": "",
+          "left": 586,
+          "right": 906,
+          "width": 320
+        }
+      ],
+      "badCount": 2,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 9827
+    }
+  },
+  {
+    "page": "services.html",
+    "width": 1440,
+    "metrics": {
+      "sw": 1440,
+      "cw": 1440,
+      "bad": [
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb a",
+          "id": "",
+          "left": -119,
+          "right": 271,
+          "width": 390
+        },
+        {
+          "tag": "SPAN",
+          "cls": "impact-orb b",
+          "id": "",
+          "left": 1174,
+          "right": 1494,
+          "width": 320
+        }
+      ],
+      "badCount": 2,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 329,
+          "h": 28
+        },
+        {
+          "tag": "A",
+          "text": "Discuss paid growth\n\u2197",
+          "w": 293,
+          "h": 35
+        },
+        {
+          "tag": "A",
+          "text": "Build a creative engine\n\u2197",
+          "w": 293,
+          "h": 35
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade brand visuals\n\u2197",
+          "w": 293,
+          "h": 35
+        },
+        {
+          "tag": "A",
+          "text": "Plan a new website\n\u2197",
+          "w": 293,
+          "h": 35
+        },
+        {
+          "tag": "A",
+          "text": "Validate a SaaS idea\n\u2197",
+          "w": 293,
+          "h": 35
+        },
+        {
+          "tag": "A",
+          "text": "Automate operations\n\u2197",
+          "w": 293,
+          "h": 35
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 252,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 16
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 16
+        }
+      ],
+      "smallCount": 20,
+      "height": 8022
+    }
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 320,
+    "metrics": {
+      "sw": 320,
+      "cw": 320,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "graph-shine",
+          "id": "",
+          "left": -453,
+          "right": -62,
+          "width": 391
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-track",
+          "id": "",
+          "left": 14,
+          "right": 2426,
+          "width": 2412
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 14,
+          "right": 1214,
+          "width": 1200
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 216,
+          "right": 406,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 231,
+          "right": 391,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 231,
+          "right": 391,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 418,
+          "right": 608,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 433,
+          "right": 593,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 433,
+          "right": 593,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 620,
+          "right": 810,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 635,
+          "right": 795,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 635,
+          "right": 795,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 822,
+          "right": 1012,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 837,
+          "right": 997,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 837,
+          "right": 997,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1024,
+          "right": 1214,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1039,
+          "right": 1199,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1039,
+          "right": 1199,
+          "width": 160
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 1226,
+          "right": 2426,
+          "width": 1200
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1226,
+          "right": 1416,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1241,
+          "right": 1401,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1241,
+          "right": 1401,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1428,
+          "right": 1618,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1443,
+          "right": 1603,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1443,
+          "right": 1603,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1630,
+          "right": 1820,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1645,
+          "right": 1805,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1645,
+          "right": 1805,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1832,
+          "right": 2022,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1847,
+          "right": 2007,
+          "width": 160
+        }
+      ],
+      "badCount": 48,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 39,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 33,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 12744
+    }
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 390,
+    "metrics": {
+      "sw": 390,
+      "cw": 390,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "graph-shine",
+          "id": "",
+          "left": -566,
+          "right": -81,
+          "width": 486
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-track",
+          "id": "",
+          "left": 14,
+          "right": 2426,
+          "width": 2412
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 14,
+          "right": 1214,
+          "width": 1200
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 216,
+          "right": 406,
+          "width": 190
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 418,
+          "right": 608,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 433,
+          "right": 593,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 433,
+          "right": 593,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 620,
+          "right": 810,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 635,
+          "right": 795,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 635,
+          "right": 795,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 822,
+          "right": 1012,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 837,
+          "right": 997,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 837,
+          "right": 997,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1024,
+          "right": 1214,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1039,
+          "right": 1199,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1039,
+          "right": 1199,
+          "width": 160
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 1226,
+          "right": 2426,
+          "width": 1200
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1226,
+          "right": 1416,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1241,
+          "right": 1401,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1241,
+          "right": 1401,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1428,
+          "right": 1618,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1443,
+          "right": 1603,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1443,
+          "right": 1603,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1630,
+          "right": 1820,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1645,
+          "right": 1805,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1645,
+          "right": 1805,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1832,
+          "right": 2022,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1847,
+          "right": 2007,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1847,
+          "right": 2007,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2034,
+          "right": 2224,
+          "width": 190
+        }
+      ],
+      "badCount": 44,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 39,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 33,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 12617
+    }
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 430,
+    "metrics": {
+      "sw": 430,
+      "cw": 430,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "graph-shine",
+          "id": "",
+          "left": -631,
+          "right": -91,
+          "width": 540
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-track",
+          "id": "",
+          "left": 14,
+          "right": 2426,
+          "width": 2412
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 14,
+          "right": 1214,
+          "width": 1200
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 418,
+          "right": 608,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 433,
+          "right": 593,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 433,
+          "right": 593,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 620,
+          "right": 810,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 635,
+          "right": 795,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 635,
+          "right": 795,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 822,
+          "right": 1012,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 837,
+          "right": 997,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 837,
+          "right": 997,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1024,
+          "right": 1214,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1039,
+          "right": 1199,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1039,
+          "right": 1199,
+          "width": 160
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 1226,
+          "right": 2426,
+          "width": 1200
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1226,
+          "right": 1416,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1241,
+          "right": 1401,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1241,
+          "right": 1401,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1428,
+          "right": 1618,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1443,
+          "right": 1603,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1443,
+          "right": 1603,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1630,
+          "right": 1820,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1645,
+          "right": 1805,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1645,
+          "right": 1805,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1832,
+          "right": 2022,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1847,
+          "right": 2007,
+          "width": 160
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1847,
+          "right": 2007,
+          "width": 160
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2034,
+          "right": 2224,
+          "width": 190
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2049,
+          "right": 2209,
+          "width": 160
+        }
+      ],
+      "badCount": 41,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 39,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 33,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 12560
+    }
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 768,
+    "metrics": {
+      "sw": 768,
+      "cw": 768,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "graph-shine",
+          "id": "",
+          "left": -1168,
+          "right": -178,
+          "width": 990
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-track",
+          "id": "",
+          "left": 16,
+          "right": 2644,
+          "width": 2628
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 16,
+          "right": 1324,
+          "width": 1308
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 676,
+          "right": 884,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 693,
+          "right": 867,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 693,
+          "right": 867,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 896,
+          "right": 1104,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 913,
+          "right": 1087,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 913,
+          "right": 1087,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1116,
+          "right": 1324,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1133,
+          "right": 1307,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1133,
+          "right": 1307,
+          "width": 174
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 1336,
+          "right": 2644,
+          "width": 1308
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1336,
+          "right": 1544,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1353,
+          "right": 1527,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1353,
+          "right": 1527,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1556,
+          "right": 1764,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1573,
+          "right": 1747,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1573,
+          "right": 1747,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1776,
+          "right": 1984,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1793,
+          "right": 1967,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1793,
+          "right": 1967,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1996,
+          "right": 2204,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2013,
+          "right": 2187,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 2013,
+          "right": 2187,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2216,
+          "right": 2424,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2233,
+          "right": 2407,
+          "width": 174
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 2233,
+          "right": 2407,
+          "width": 174
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2436,
+          "right": 2644,
+          "width": 208
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2453,
+          "right": 2627,
+          "width": 174
+        }
+      ],
+      "badCount": 45,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 39,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 33,
+          "h": 44
+        }
+      ],
+      "smallCount": 2,
+      "height": 12546
+    }
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 1440,
+    "metrics": {
+      "sw": 1440,
+      "cw": 1440,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "graph-shine",
+          "id": "",
+          "left": -155,
+          "right": 616,
+          "width": 771
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-track",
+          "id": "",
+          "left": 100,
+          "right": 3652,
+          "width": 3552
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 100,
+          "right": 1870,
+          "width": 1770
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1288,
+          "right": 1573,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1305,
+          "right": 1556,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1305,
+          "right": 1556,
+          "width": 251
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1585,
+          "right": 1870,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1602,
+          "right": 1853,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1602,
+          "right": 1853,
+          "width": 251
+        },
+        {
+          "tag": "DIV",
+          "cls": "proof-strip-group",
+          "id": "",
+          "left": 1882,
+          "right": 3652,
+          "width": 1770
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 1882,
+          "right": 2167,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 1899,
+          "right": 2150,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 1899,
+          "right": 2150,
+          "width": 251
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2179,
+          "right": 2464,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2196,
+          "right": 2447,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 2196,
+          "right": 2447,
+          "width": 251
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2476,
+          "right": 2761,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2493,
+          "right": 2744,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 2493,
+          "right": 2744,
+          "width": 251
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 2773,
+          "right": 3058,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 2790,
+          "right": 3041,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 2790,
+          "right": 3041,
+          "width": 251
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 3070,
+          "right": 3355,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 3087,
+          "right": 3338,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 3087,
+          "right": 3338,
+          "width": 251
+        },
+        {
+          "tag": "ARTICLE",
+          "cls": "proof-stat",
+          "id": "",
+          "left": 3367,
+          "right": 3652,
+          "width": 285
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "id": "",
+          "left": 3384,
+          "right": 3635,
+          "width": 251
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "id": "",
+          "left": 3384,
+          "right": 3635,
+          "width": 251
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "id": "",
+          "left": 1325,
+          "right": 1524,
+          "width": 198
+        },
+        {
+          "tag": "SPAN",
+          "cls": "proof-top",
+          "id": "",
+          "left": 633,
+          "right": 1447,
+          "width": 814
+        }
+      ],
+      "badCount": 46,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 329,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Explore the system\n\u2193",
+          "w": 168,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Home",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Services",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Email",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 39,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 33,
+          "h": 19
+        }
+      ],
+      "smallCount": 19,
+      "height": 15373
+    }
+  },
+  {
+    "page": "about.html",
+    "width": 320,
+    "metrics": {
+      "sw": 320,
+      "cw": 320,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "mind-glow",
+          "id": "",
+          "left": -4,
+          "right": 324,
+          "width": 329
+        }
+      ],
+      "badCount": 1,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8437
+    }
+  },
+  {
+    "page": "about.html",
+    "width": 390,
+    "metrics": {
+      "sw": 390,
+      "cw": 390,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8381
+    }
+  },
+  {
+    "page": "about.html",
+    "width": 430,
+    "metrics": {
+      "sw": 430,
+      "cw": 430,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8377
+    }
+  },
+  {
+    "page": "about.html",
+    "width": 768,
+    "metrics": {
+      "sw": 768,
+      "cw": 768,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8571
+    }
+  },
+  {
+    "page": "about.html",
+    "width": 1440,
+    "metrics": {
+      "sw": 1440,
+      "cw": 1440,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 331,
+          "h": 28
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 16
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 16
+        }
+      ],
+      "smallCount": 14,
+      "height": 6012
+    }
+  },
+  {
+    "page": "contact.html",
+    "width": 320,
+    "metrics": {
+      "sw": 320,
+      "cw": 320,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "signal-stage",
+          "id": "signalStage",
+          "left": -9,
+          "right": 329,
+          "width": 337
+        },
+        {
+          "tag": "DIV",
+          "cls": "signal-halo",
+          "id": "",
+          "left": -11,
+          "right": 332,
+          "width": 343
+        },
+        {
+          "tag": "SPAN",
+          "cls": "signal-orbit o1",
+          "id": "",
+          "left": -9,
+          "right": 329,
+          "width": 337
+        }
+      ],
+      "badCount": 3,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8283
+    }
+  },
+  {
+    "page": "contact.html",
+    "width": 390,
+    "metrics": {
+      "sw": 390,
+      "cw": 390,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8140
+    }
+  },
+  {
+    "page": "contact.html",
+    "width": 430,
+    "metrics": {
+      "sw": 430,
+      "cw": 430,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 8155
+    }
+  },
+  {
+    "page": "contact.html",
+    "width": 768,
+    "metrics": {
+      "sw": 768,
+      "cw": 768,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 44
+        }
+      ],
+      "smallCount": 1,
+      "height": 7907
+    }
+  },
+  {
+    "page": "contact.html",
+    "width": 1440,
+    "metrics": {
+      "sw": 1440,
+      "cw": 1440,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 331,
+          "h": 28
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com\n\u2197",
+          "w": 353,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 245,
+          "h": 20
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 16
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 16
+        }
+      ],
+      "smallCount": 15,
+      "height": 4433
+    }
+  },
+  {
+    "page": "blog.html",
+    "width": 320,
+    "metrics": {
+      "sw": 320,
+      "cw": 320,
+      "bad": [
+        {
+          "tag": "DIV",
+          "cls": "library-stage",
+          "id": "libraryStage",
+          "left": -1,
+          "right": 321,
+          "width": 322
+        },
+        {
+          "tag": "SPAN",
+          "cls": "library-note n1",
+          "id": "",
+          "left": -1,
+          "right": 98,
+          "width": 99
+        },
+        {
+          "tag": "SPAN",
+          "cls": "library-note n2",
+          "id": "",
+          "left": 223,
+          "right": 322,
+          "width": 99
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 196,
+          "right": 366,
+          "width": 170
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 376,
+          "right": 546,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 395,
+          "right": 402,
+          "width": 7
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 556,
+          "right": 726,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 582,
+          "right": 589,
+          "width": 7
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 736,
+          "right": 906,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 754,
+          "right": 761,
+          "width": 7
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 265,
+          "right": 359,
+          "width": 94
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 367,
+          "right": 489,
+          "width": 122
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 497,
+          "right": 588,
+          "width": 91
+        }
+      ],
+      "badCount": 13,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 209,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 211,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 207,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 234,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 243,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 204,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 288,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 19
+        }
+      ],
+      "smallCount": 27,
+      "height": 14297
+    }
+  },
+  {
+    "page": "blog.html",
+    "width": 390,
+    "metrics": {
+      "sw": 390,
+      "cw": 390,
+      "bad": [
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 376,
+          "right": 546,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 395,
+          "right": 402,
+          "width": 7
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 556,
+          "right": 726,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 582,
+          "right": 589,
+          "width": 7
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 736,
+          "right": 906,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 754,
+          "right": 761,
+          "width": 7
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 367,
+          "right": 489,
+          "width": 122
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 497,
+          "right": 588,
+          "width": 91
+        }
+      ],
+      "badCount": 8,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 279,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 211,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 207,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 234,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 291,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 293,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 243,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 204,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 278,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 358,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Terms",
+          "w": 35,
+          "h": 19
+        }
+      ],
+      "smallCount": 30,
+      "height": 13267
+    }
+  },
+  {
+    "page": "blog.html",
+    "width": 430,
+    "metrics": {
+      "sw": 430,
+      "cw": 430,
+      "bad": [
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 376,
+          "right": 546,
+          "width": 170
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 556,
+          "right": 726,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 582,
+          "right": 589,
+          "width": 7
+        },
+        {
+          "tag": "SPAN",
+          "cls": "topic-pill",
+          "id": "",
+          "left": 736,
+          "right": 906,
+          "width": 170
+        },
+        {
+          "tag": "I",
+          "cls": "",
+          "id": "",
+          "left": 754,
+          "right": 761,
+          "width": 7
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 367,
+          "right": 489,
+          "width": 122
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "filter-btn",
+          "id": "",
+          "left": 497,
+          "right": 588,
+          "width": 91
+        }
+      ],
+      "badCount": 7,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 319,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 211,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 207,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 234,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 323,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 291,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 293,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 243,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 204,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 278,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 398,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 19
+        }
+      ],
+      "smallCount": 31,
+      "height": 12906
+    }
+  },
+  {
+    "page": "blog.html",
+    "width": 768,
+    "metrics": {
+      "sw": 768,
+      "cw": 768,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 657,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 211,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 207,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 234,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 323,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 291,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 293,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 243,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 204,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 278,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 323,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 19
+        }
+      ],
+      "smallCount": 31,
+      "height": 9865
+    }
+  },
+  {
+    "page": "blog.html",
+    "width": 1440,
+    "metrics": {
+      "sw": 1440,
+      "cw": 1440,
+      "bad": [],
+      "badCount": 0,
+      "small": [
+        {
+          "tag": "A",
+          "text": "Usama Ghaffar",
+          "w": 331,
+          "h": 31
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Read insight\n\u2197",
+          "w": 90,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 211,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 207,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 234,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 323,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 291,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 293,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 243,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 204,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "w": 278,
+          "h": 25
+        },
+        {
+          "tag": "A",
+          "text": "Paid Advertising",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "AI Creatives",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Web Development",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Automation",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Portfolio",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "osamaghaffar001@gmail.com",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Instagram",
+          "w": 245,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "w": 43,
+          "h": 19
+        }
+      ],
+      "smallCount": 31,
+      "height": 7659
+    }
+  }
+]

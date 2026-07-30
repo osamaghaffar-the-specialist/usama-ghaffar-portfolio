@@ -1,0 +1,254 @@
+[
+  {
+    "page": "index.html",
+    "width": 320,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 360,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 390,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 430,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 768,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 1024,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "index.html",
+    "width": 1440,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/index.html\\nCall log:\\n  - navigating to \"https://site.test/index.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 320,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 360,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 390,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 430,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 768,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 1024,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "services.html",
+    "width": 1440,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/services.html\\nCall log:\\n  - navigating to \"https://site.test/services.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 320,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 360,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 390,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 430,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 768,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 1024,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "performance-marketing.html",
+    "width": 1440,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/performance-marketing.html\\nCall log:\\n  - navigating to \"https://site.test/performance-marketing.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 320,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 360,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 390,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 430,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 768,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 1024,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "about.html",
+    "width": 1440,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/about.html\\nCall log:\\n  - navigating to \"https://site.test/about.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 320,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 360,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 390,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 430,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 768,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 1024,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "contact.html",
+    "width": 1440,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/contact.html\\nCall log:\\n  - navigating to \"https://site.test/contact.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 320,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 360,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 390,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 430,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 768,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 1024,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  },
+  {
+    "page": "blog.html",
+    "width": 1440,
+    "error": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at https://site.test/blog.html\\nCall log:\\n  - navigating to \"https://site.test/blog.html\", waiting until \"domcontentloaded\"\\n')",
+    "errors": []
+  }
+]

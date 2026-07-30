@@ -1,0 +1,898 @@
+{
+  "320": {
+    "index.html": {
+      "vw": 320,
+      "docWidth": 320,
+      "bodyWidth": 541,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".results-copy h2": {
+          "left": 20,
+          "right": 300,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 280
+        },
+        ".services-section .svc-headline": {
+          "left": 53,
+          "right": 267,
+          "leftGutter": 53,
+          "rightGutter": 53,
+          "width": 214
+        },
+        ".faq-intro h2": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        }
+      }
+    },
+    "services.html": {
+      "vw": 320,
+      "docWidth": 320,
+      "bodyWidth": 320,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".services .section-head h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        },
+        ".method .method-sticky h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        },
+        ".engagement .section-head h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        }
+      }
+    },
+    "performance-marketing.html": {
+      "vw": 320,
+      "docWidth": 320,
+      "bodyWidth": 320,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".surface .section-head h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        },
+        ".case-study .case-intro h2": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".case-details .detail-card h3": {
+          "left": 56,
+          "right": 264,
+          "leftGutter": 56,
+          "rightGutter": 56,
+          "width": 208
+        }
+      }
+    },
+    "about.html": {
+      "vw": 320,
+      "docWidth": 320,
+      "bodyWidth": 320,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".about-hero h1": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".story-section .section-kicker": {
+          "left": 37,
+          "right": 166.7,
+          "leftGutter": 37,
+          "rightGutter": 153.3,
+          "width": 129.7
+        },
+        ".story-section h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        },
+        ".partnership-section h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        }
+      }
+    },
+    "contact.html": {
+      "vw": 320,
+      "docWidth": 320,
+      "bodyWidth": 320,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".contact-hero h1": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".inquiry-surface .section-kicker": {
+          "left": 37,
+          "right": 174.8,
+          "leftGutter": 37,
+          "rightGutter": 145.2,
+          "width": 137.8
+        },
+        ".inquiry-surface h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        },
+        ".next-surface h2": {
+          "left": 37,
+          "right": 283,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 246
+        }
+      }
+    },
+    "blog.html": {
+      "vw": 320,
+      "docWidth": 320,
+      "bodyWidth": 320,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".blog-hero h1": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".featured-section .section-head h2": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        },
+        ".featured-card .featured-copy h2": {
+          "left": 47,
+          "right": 273,
+          "leftGutter": 47,
+          "rightGutter": 47,
+          "width": 226
+        },
+        ".editorial-copy h2": {
+          "left": 16,
+          "right": 304,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 288
+        }
+      }
+    }
+  },
+  "360": {
+    "index.html": {
+      "vw": 360,
+      "docWidth": 360,
+      "bodyWidth": 541,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".results-copy h2": {
+          "left": 20,
+          "right": 340,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 320
+        },
+        ".services-section .svc-headline": {
+          "left": 73,
+          "right": 287,
+          "leftGutter": 73,
+          "rightGutter": 73,
+          "width": 214
+        },
+        ".faq-intro h2": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        }
+      }
+    },
+    "services.html": {
+      "vw": 360,
+      "docWidth": 360,
+      "bodyWidth": 360,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".services .section-head h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        },
+        ".method .method-sticky h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        },
+        ".engagement .section-head h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        }
+      }
+    },
+    "performance-marketing.html": {
+      "vw": 360,
+      "docWidth": 360,
+      "bodyWidth": 360,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".surface .section-head h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        },
+        ".case-study .case-intro h2": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".case-details .detail-card h3": {
+          "left": 56,
+          "right": 304,
+          "leftGutter": 56,
+          "rightGutter": 56,
+          "width": 248
+        }
+      }
+    },
+    "about.html": {
+      "vw": 360,
+      "docWidth": 360,
+      "bodyWidth": 360,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".about-hero h1": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".story-section .section-kicker": {
+          "left": 37,
+          "right": 166.7,
+          "leftGutter": 37,
+          "rightGutter": 193.3,
+          "width": 129.7
+        },
+        ".story-section h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        },
+        ".partnership-section h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        }
+      }
+    },
+    "contact.html": {
+      "vw": 360,
+      "docWidth": 360,
+      "bodyWidth": 360,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".contact-hero h1": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".inquiry-surface .section-kicker": {
+          "left": 37,
+          "right": 174.8,
+          "leftGutter": 37,
+          "rightGutter": 185.2,
+          "width": 137.8
+        },
+        ".inquiry-surface h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        },
+        ".next-surface h2": {
+          "left": 37,
+          "right": 323,
+          "leftGutter": 37,
+          "rightGutter": 37,
+          "width": 286
+        }
+      }
+    },
+    "blog.html": {
+      "vw": 360,
+      "docWidth": 360,
+      "bodyWidth": 360,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".blog-hero h1": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".featured-section .section-head h2": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        },
+        ".featured-card .featured-copy h2": {
+          "left": 47,
+          "right": 313,
+          "leftGutter": 47,
+          "rightGutter": 47,
+          "width": 266
+        },
+        ".editorial-copy h2": {
+          "left": 16,
+          "right": 344,
+          "leftGutter": 16,
+          "rightGutter": 16,
+          "width": 328
+        }
+      }
+    }
+  },
+  "390": {
+    "index.html": {
+      "vw": 390,
+      "docWidth": 390,
+      "bodyWidth": 545,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".results-copy h2": {
+          "left": 24,
+          "right": 366,
+          "leftGutter": 24,
+          "rightGutter": 24,
+          "width": 342
+        },
+        ".services-section .svc-headline": {
+          "left": 88,
+          "right": 302,
+          "leftGutter": 88,
+          "rightGutter": 88,
+          "width": 214
+        },
+        ".faq-intro h2": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        }
+      }
+    },
+    "services.html": {
+      "vw": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".services .section-head h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        },
+        ".method .method-sticky h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        },
+        ".engagement .section-head h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        }
+      }
+    },
+    "performance-marketing.html": {
+      "vw": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".surface .section-head h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        },
+        ".case-study .case-intro h2": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".case-details .detail-card h3": {
+          "left": 67,
+          "right": 323,
+          "leftGutter": 67,
+          "rightGutter": 67,
+          "width": 256
+        }
+      }
+    },
+    "about.html": {
+      "vw": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".about-hero h1": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".story-section .section-kicker": {
+          "left": 45,
+          "right": 174.7,
+          "leftGutter": 45,
+          "rightGutter": 215.3,
+          "width": 129.7
+        },
+        ".story-section h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        },
+        ".partnership-section h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        }
+      }
+    },
+    "contact.html": {
+      "vw": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".contact-hero h1": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".inquiry-surface .section-kicker": {
+          "left": 45,
+          "right": 182.8,
+          "leftGutter": 45,
+          "rightGutter": 207.2,
+          "width": 137.8
+        },
+        ".inquiry-surface h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        },
+        ".next-surface h2": {
+          "left": 45,
+          "right": 345,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 300
+        }
+      }
+    },
+    "blog.html": {
+      "vw": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".blog-hero h1": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".featured-section .section-head h2": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        },
+        ".featured-card .featured-copy h2": {
+          "left": 55,
+          "right": 335,
+          "leftGutter": 55,
+          "rightGutter": 55,
+          "width": 280
+        },
+        ".editorial-copy h2": {
+          "left": 20,
+          "right": 370,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 350
+        }
+      }
+    }
+  },
+  "430": {
+    "index.html": {
+      "vw": 430,
+      "docWidth": 430,
+      "bodyWidth": 545,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".results-copy h2": {
+          "left": 24,
+          "right": 406,
+          "leftGutter": 24,
+          "rightGutter": 24,
+          "width": 382
+        },
+        ".services-section .svc-headline": {
+          "left": 108,
+          "right": 322,
+          "leftGutter": 108,
+          "rightGutter": 108,
+          "width": 214
+        },
+        ".faq-intro h2": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        }
+      }
+    },
+    "services.html": {
+      "vw": 430,
+      "docWidth": 430,
+      "bodyWidth": 430,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".services .section-head h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        },
+        ".method .method-sticky h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        },
+        ".engagement .section-head h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        }
+      }
+    },
+    "performance-marketing.html": {
+      "vw": 430,
+      "docWidth": 430,
+      "bodyWidth": 430,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".hero h1": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".surface .section-head h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        },
+        ".case-study .case-intro h2": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".case-details .detail-card h3": {
+          "left": 67,
+          "right": 363,
+          "leftGutter": 67,
+          "rightGutter": 67,
+          "width": 296
+        }
+      }
+    },
+    "about.html": {
+      "vw": 430,
+      "docWidth": 430,
+      "bodyWidth": 430,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".about-hero h1": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".story-section .section-kicker": {
+          "left": 45,
+          "right": 174.7,
+          "leftGutter": 45,
+          "rightGutter": 255.3,
+          "width": 129.7
+        },
+        ".story-section h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        },
+        ".partnership-section h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        }
+      }
+    },
+    "contact.html": {
+      "vw": 430,
+      "docWidth": 430,
+      "bodyWidth": 430,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".contact-hero h1": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".inquiry-surface .section-kicker": {
+          "left": 45,
+          "right": 182.8,
+          "leftGutter": 45,
+          "rightGutter": 247.2,
+          "width": 137.8
+        },
+        ".inquiry-surface h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        },
+        ".next-surface h2": {
+          "left": 45,
+          "right": 385,
+          "leftGutter": 45,
+          "rightGutter": 45,
+          "width": 340
+        }
+      }
+    },
+    "blog.html": {
+      "vw": 430,
+      "docWidth": 430,
+      "bodyWidth": 430,
+      "edgeTextCount": 0,
+      "edgeText": [],
+      "samples": {
+        ".blog-hero h1": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".featured-section .section-head h2": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        },
+        ".featured-card .featured-copy h2": {
+          "left": 55,
+          "right": 375,
+          "leftGutter": 55,
+          "rightGutter": 55,
+          "width": 320
+        },
+        ".editorial-copy h2": {
+          "left": 20,
+          "right": 410,
+          "leftGutter": 20,
+          "rightGutter": 20,
+          "width": 390
+        }
+      }
+    }
+  }
+}
