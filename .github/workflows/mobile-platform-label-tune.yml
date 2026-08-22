@@ -1,0 +1,42 @@
+name: Tune mobile platform labels
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/mobile-platform-label-tune.yml]
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Apply scoped mobile platform label changes
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old_css = '    .trusted-logo-badge{margin:0 28px}\n    .trusted-logo-badge .logo-name{font-size:.66rem!important;line-height:1.15!important}\n'
+          new_css = '    .trusted-logo-badge{margin:0 30px}\n    .trusted-logo-badge .logo-name{font-size:.58rem!important;line-height:1.15!important}\n'
+          if s.count(old_css) != 1:
+              raise SystemExit(f'Expected mobile trusted label CSS once, found {s.count(old_css)}')
+          s = s.replace(old_css, new_css, 1)
+          old_label = '<span class="logo-name">GoHighLevel</span>'
+          if s.count(old_label) != 2:
+              raise SystemExit(f'Expected GoHighLevel label twice, found {s.count(old_label)}')
+          s = s.replace(old_label, '<span class="logo-name">GHL</span>')
+          p.write_text(s, encoding='utf-8')
+      - name: Verify scope
+        run: |
+          git diff --check
+          test "$(git diff --name-only)" = "index.html"
+          test "$(grep -o '<span class=\"logo-name\">GHL</span>' index.html | wc -l)" -eq 2
+      - name: Commit patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Tune mobile platform labels'
+          git push origin main
