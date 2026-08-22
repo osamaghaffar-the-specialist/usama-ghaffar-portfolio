@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
 <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous"/>
 <style>
   :root{
     --font-primary: "Space Grotesk", sans-serif;
@@ -1668,10 +1669,6 @@
     .trusted-track{animation-duration:20s}
   }
 
-  .bee-instant-poster{position:absolute;inset:10%;z-index:1;border-radius:50%;background:url("assets/images/bee-instant-poster.webp") center/cover no-repeat;opacity:.92;filter:drop-shadow(0 16px 24px rgba(11,14,20,.10));transition:opacity .24s ease,transform .6s ease;animation:beePosterFloat 2.8s ease-in-out infinite;pointer-events:none}
-  .bee-stage.bee-ready .bee-instant-poster{opacity:0;transform:scale(.96)}
-  @keyframes beePosterFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-
   html,body,header{min-width:0!important}
 </style>
 
@@ -1783,7 +1780,6 @@ img,svg,canvas{max-width:100%}
 </div>
 </div>
 <div class="bee-stage">
-<div aria-hidden="true" class="bee-instant-poster"></div>
 <canvas id="beeCanvas"></canvas>
 <div class="bee-shadow"></div>
 </div>
@@ -2574,8 +2570,8 @@ img,svg,canvas{max-width:100%}
 </div>
 </div>
 </footer>
-<!-- Three.js loads after the page markup; the lightweight poster keeps the bee visible immediately. -->
-<script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Three.js is preloaded from the head, then executed here after the page markup. -->
+<script crossorigin="anonymous" fetchpriority="high" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
     const canvas = document.getElementById('beeCanvas');
@@ -2589,7 +2585,7 @@ img,svg,canvas{max-width:100%}
     camera.position.set(3.4, 1.1, 5.2);
     camera.lookAt(0, 0.5, 0);
 
-    const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+    const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true, powerPreference:"high-performance"});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 820 ? 1 : 1.5));
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.shadowMap.enabled = true;
@@ -2771,6 +2767,7 @@ img,svg,canvas{max-width:100%}
     upperBody.add(wing(-1,-0.18, 1.1, 0.38));
 
     bee.position.y = 0.5;
+    bee.rotation.y = 0.5;
     bee.scale.setScalar(0.9);
     scene.add(bee);
 
@@ -2878,10 +2875,8 @@ img,svg,canvas{max-width:100%}
       renderer.render(scene, camera);
     }
 
-    // Compile and paint the first frame immediately so the hero never appears empty.
-    renderer.compile(scene, camera);
+    // Paint the first 3D frame as soon as the scene is ready.
     renderer.render(scene, camera);
-    canvas.dataset.ready = "true"; canvas.parentElement.classList.add("bee-ready");
     animate();
   })();
 </script>
