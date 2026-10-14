@@ -1,0 +1,64 @@
+name: Bee Marketing SEO Brand Alignment V2
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bee-marketing-brand-seo-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  align-brand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Align Bee Marketing SEO brand signals
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def load(name):
+              return Path(name).read_text(encoding='utf-8')
+
+          def save(name, text):
+              Path(name).write_text(text, encoding='utf-8')
+
+          s = load('index.html')
+          s = s.replace('Digital Marketing Agency Pakistan | Ecommerce Growth — Usama</title>', 'Digital Marketing Agency Pakistan | Ecommerce Growth — Bee Marketing</title>', 1)
+          s = s.replace('Digital Marketing Agency Pakistan | Ecommerce Growth — Usama"/>', 'Digital Marketing Agency Pakistan | Ecommerce Growth — Bee Marketing"/>', 2)
+          s = s.replace('<span class="logo-name">Usama Ghaffar</span>', '<span class="logo-name">Bee Marketing</span>', 1)
+          s = s.replace('"@type": "Organization",\n      "@id": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/#organization",\n      "name": "Usama Ghaffar"', '"@type": "Organization",\n      "@id": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/#organization",\n      "name": "Bee Marketing"', 1)
+          save('index.html', s)
+
+          s = load('services.html')
+          s = s.replace('Digital Marketing Services Pakistan | Meta Ads, Ecommerce & SEO — Usama Ghaffar', 'Digital Marketing Services Pakistan | Meta Ads, Ecommerce & SEO — Bee Marketing', 1)
+          s = s.replace('>Usama Ghaffar</a>', '>Bee Marketing</a>', 1)
+          save('services.html', s)
+
+          s = load('ecommerce-agency-pakistan.html')
+          s = s.replace('Ecommerce Agency Pakistan | Meta &amp; Google Ads — Usama Ghaffar', 'Ecommerce Agency Pakistan | Meta &amp; Google Ads — Bee Marketing')
+          s = s.replace('"provider":{"@type":"Person","name":"Usama Ghaffar","url":"https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"}', '"provider":{"@type":"Organization","name":"Bee Marketing","url":"https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/","founder":{"@type":"Person","name":"Usama Ghaffar"}}', 1)
+          s = s.replace('<a class="brand" href="index.html">Usama Ghaffar</a>', '<a class="brand" href="index.html">Bee Marketing</a>', 1)
+          save('ecommerce-agency-pakistan.html', s)
+
+          s = load('facebook-ads-agency-pakistan.html')
+          s = s.replace('Facebook Ads Agency Pakistan | Meta Ads Management — Usama Ghaffar', 'Facebook Ads Agency Pakistan | Meta Ads Management — Bee Marketing')
+          s = s.replace('"provider":{"@type":"Person","name":"Usama Ghaffar","url":"https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"}', '"provider":{"@type":"Organization","name":"Bee Marketing","url":"https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/","founder":{"@type":"Person","name":"Usama Ghaffar"}}', 1)
+          s = s.replace('<a class="brand" href="index.html">Usama Ghaffar</a>', '<a class="brand" href="index.html">Bee Marketing</a>', 1)
+          save('facebook-ads-agency-pakistan.html', s)
+
+          assert 'Bee Marketing' in load('index.html')
+          assert 'Bee Marketing' in load('services.html')
+          assert 'Bee Marketing' in load('ecommerce-agency-pakistan.html')
+          assert 'Bee Marketing' in load('facebook-ads-agency-pakistan.html')
+
+      - name: Commit aligned branding
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/bee-marketing-brand-seo-v2.yml
+          if [ -f .github/workflows/bee-marketing-brand-seo.yml ]; then git rm .github/workflows/bee-marketing-brand-seo.yml; fi
+          git add index.html services.html ecommerce-agency-pakistan.html facebook-ads-agency-pakistan.html
+          git commit -m "SEO: align Pakistan agency branding to Bee Marketing"
+          git push
