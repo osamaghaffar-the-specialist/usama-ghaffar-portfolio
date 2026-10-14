@@ -1,0 +1,28 @@
+name: Run Buyer Intent Integration
+
+on:
+  push:
+    paths:
+      - 'scripts/integrate_buyer_intent.py'
+      - '.github/workflows/run-buyer-intent-integration.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Integrate buyer-intent content
+        run: python scripts/integrate_buyer_intent.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html ecommerce-agency-pakistan.html facebook-ads-agency-pakistan.html google-ads-agency-pakistan.html performance-marketing-agency-pakistan.html seo-agency-pakistan.html web-development-agency-pakistan.html
+          git commit -m "SEO: integrate commercial long-tail keyword coverage" || exit 0
+          git push
