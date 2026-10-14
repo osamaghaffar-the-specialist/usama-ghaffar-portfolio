@@ -1,0 +1,92 @@
+name: SEO Cleanup
+
+on:
+  push:
+    paths:
+      - '.github/workflows/seo-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tighten titles, descriptions and services schema
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          def replace_title(path, title):
+              p = Path(path)
+              s = p.read_text(encoding='utf-8')
+              s, n = re.subn(r'<title>.*?</title>', f'<title>{title}</title>', s, count=1, flags=re.S)
+              if n != 1:
+                  raise SystemExit(f'Could not replace title in {path}')
+              p.write_text(s, encoding='utf-8')
+
+          def replace_description(path, description):
+              p = Path(path)
+              s = p.read_text(encoding='utf-8')
+              pattern = r'<meta(?=[^>]*\bname=["\']description["\'])[^>]*>'
+              replacement = f'<meta name="description" content="{description}"/>'
+              s, n = re.subn(pattern, replacement, s, count=1, flags=re.I)
+              if n != 1:
+                  raise SystemExit(f'Could not replace description in {path}')
+              p.write_text(s, encoding='utf-8')
+
+          replace_title('index.html', 'Digital Marketing Agency Pakistan | Bee Marketing')
+          replace_title('services.html', 'Digital Marketing Services Pakistan | Bee Marketing')
+          replace_title('ecommerce-agency-pakistan.html', 'Ecommerce Agency Pakistan | Meta Ads | Bee Marketing')
+          replace_title('facebook-ads-agency-pakistan.html', 'Facebook Ads Agency Pakistan | Bee Marketing')
+
+          replace_description('services.html', 'Digital marketing services in Pakistan for ecommerce brands, including Meta Ads, Google Ads, performance marketing, SEO, CRO, websites and automation.')
+          replace_description('ecommerce-agency-pakistan.html', 'Ecommerce agency in Pakistan helping online stores grow through Meta Ads, Google Ads, CRO, Shopify strategy, creative testing and profitable performance marketing.')
+          replace_description('facebook-ads-agency-pakistan.html', 'Facebook and Meta Ads agency in Pakistan for ecommerce brands focused on ROAS, creative testing, tracking and profitable customer acquisition.')
+
+          # Keep social titles aligned with the shorter SERP titles.
+          social_titles = {
+              'index.html': 'Digital Marketing Agency Pakistan | Bee Marketing',
+              'ecommerce-agency-pakistan.html': 'Ecommerce Agency Pakistan | Meta Ads | Bee Marketing',
+              'facebook-ads-agency-pakistan.html': 'Facebook Ads Agency Pakistan | Bee Marketing',
+          }
+          for path, title in social_titles.items():
+              p = Path(path)
+              s = p.read_text(encoding='utf-8')
+              s = re.sub(r'<meta property="og:title" content="[^"]*"\s*/>', f'<meta property="og:title" content="{title}"/>', s, count=1)
+              s = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/>', f'<meta name="twitter:title" content="{title}"/>', s, count=1)
+              p.write_text(s, encoding='utf-8')
+
+          # Add non-duplicative structured data to the Services hub.
+          p = Path('services.html')
+          s = p.read_text(encoding='utf-8')
+          if 'id="services-structured-data"' not in s:
+              canonical = '<link rel="canonical" href="https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/services.html"/>'
+              schema = '''\n<script id="services-structured-data" type="application/ld+json">\n{\n  "@context":"https://schema.org",\n  "@type":"WebPage",\n  "name":"Digital Marketing Services in Pakistan",\n  "url":"https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/services.html",\n  "about":{\n    "@type":"ItemList",\n    "name":"Bee Marketing Services",\n    "itemListElement":[\n      {"@type":"ListItem","position":1,"name":"Meta and Facebook Ads"},\n      {"@type":"ListItem","position":2,"name":"Google Ads and PPC"},\n      {"@type":"ListItem","position":3,"name":"Ecommerce Growth"},\n      {"@type":"ListItem","position":4,"name":"Performance Marketing"},\n      {"@type":"ListItem","position":5,"name":"SEO and Conversion Optimization"}\n    ]\n  }\n}\n</script>'''
+              if canonical not in s:
+                  raise SystemExit('Services canonical marker not found')
+              s = s.replace(canonical, canonical + schema, 1)
+          p.write_text(s, encoding='utf-8')
+
+          # Validation
+          checks = {
+              'index.html': 'Digital Marketing Agency Pakistan | Bee Marketing',
+              'services.html': 'Digital Marketing Services Pakistan | Bee Marketing',
+              'ecommerce-agency-pakistan.html': 'Ecommerce Agency Pakistan | Meta Ads | Bee Marketing',
+              'facebook-ads-agency-pakistan.html': 'Facebook Ads Agency Pakistan | Bee Marketing',
+          }
+          for path, needle in checks.items():
+              text = Path(path).read_text(encoding='utf-8')
+              assert needle in text, f'Missing expected title in {path}'
+          assert 'services-structured-data' in Path('services.html').read_text(encoding='utf-8')
+
+      - name: Commit SEO cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html services.html ecommerce-agency-pakistan.html facebook-ads-agency-pakistan.html
+          git commit -m "SEO: tighten metadata and services structured data"
+          git push
