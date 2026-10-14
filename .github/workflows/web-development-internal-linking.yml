@@ -1,0 +1,75 @@
+name: Web Development Internal Linking
+
+on:
+  push:
+    paths:
+      - '.github/workflows/web-development-internal-linking.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Add contextual links to web development money page
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          target = "web-development-agency-pakistan.html"
+
+          # Homepage: link a visible website/web-development mention without changing layout.
+          p = Path("index.html")
+          text = p.read_text(encoding="utf-8")
+          if target not in text:
+              replacements = [
+                  ("Web & SaaS", '<a href="web-development-agency-pakistan.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Web &amp; SaaS</a>'),
+                  ("websites", '<a href="web-development-agency-pakistan.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">websites</a>'),
+                  ("Websites", '<a href="web-development-agency-pakistan.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Websites</a>'),
+              ]
+              for old, new in replacements:
+                  if old in text:
+                      text = text.replace(old, new, 1)
+                      break
+          p.write_text(text, encoding="utf-8")
+
+          # Services hub: add a contextual commercial link in hero copy.
+          p = Path("services.html")
+          text = p.read_text(encoding="utf-8")
+          if target not in text:
+              m = re.search(r'(<div class="hero-copy">.*?<p>)(.*?)(</p>)', text, flags=re.S)
+              if not m:
+                  raise SystemExit("Services hero paragraph not found")
+              addition = ' For conversion-focused builds, explore our <a href="web-development-agency-pakistan.html" style="text-decoration:underline;text-underline-offset:3px;font-weight:600">web development agency services in Pakistan</a>.'
+              replacement = m.group(1) + m.group(2).rstrip() + addition + m.group(3)
+              text = text[:m.start()] + replacement + text[m.end():]
+          p.write_text(text, encoding="utf-8")
+
+          # Ecommerce money page: add a contextual link where website/store growth is discussed.
+          p = Path("ecommerce-agency-pakistan.html")
+          text = p.read_text(encoding="utf-8")
+          if target not in text:
+              marker = "Shopify Growth Strategy"
+              if marker in text:
+                  text = text.replace(marker, '<a href="web-development-agency-pakistan.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Shopify Growth Strategy</a>', 1)
+              else:
+                  text = text.replace("product-page conversion", '<a href="web-development-agency-pakistan.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">product-page conversion</a>', 1)
+          p.write_text(text, encoding="utf-8")
+
+          for filename in ["index.html", "services.html", "ecommerce-agency-pakistan.html"]:
+              if target not in Path(filename).read_text(encoding="utf-8"):
+                  raise SystemExit(f"Missing web-development internal link in {filename}")
+
+      - name: Commit updates and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/web-development-internal-linking.yml
+          git add index.html services.html ecommerce-agency-pakistan.html
+          git commit -m "SEO: link web development agency page across site"
+          git push
