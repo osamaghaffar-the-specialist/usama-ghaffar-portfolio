@@ -67,7 +67,6 @@ jobs:
               s = head + body
           p.write_text(s, encoding='utf-8')
 
-          # Validate.
           assert money in Path('services.html').read_text(encoding='utf-8')
           assert money in Path('performance-marketing.html').read_text(encoding='utf-8')
           assert money in Path('index.html').read_text(encoding='utf-8')
@@ -83,3 +82,5 @@ jobs:
           git add index.html services.html performance-marketing.html
           git commit -m "SEO: separate performance marketing service and case studies"
           git push
+
+# trigger existing workflow
