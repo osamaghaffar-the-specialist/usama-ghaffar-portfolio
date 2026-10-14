@@ -1,0 +1,96 @@
+name: Bee Marketing Brand Integration
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  integrate-brand:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add favicon and Organization logo signals
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re
+
+          BASE = "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"
+          LOGO = BASE + "assets/bee-marketing-logo.webp"
+          FAVICON = "assets/favicon.webp"
+
+          script_re = re.compile(r'(<script[^>]*type=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)', re.I | re.S)
+
+          def enrich_jsonld(raw):
+              try:
+                  data = json.loads(raw.strip())
+              except Exception:
+                  return None
+
+              changed = False
+
+              def walk(node):
+                  nonlocal changed
+                  if isinstance(node, dict):
+                      typ = node.get("@type")
+                      is_org = typ == "Organization" or (isinstance(typ, list) and "Organization" in typ)
+                      if is_org and node.get("name") == "Bee Marketing":
+                          if node.get("logo") != LOGO:
+                              node["logo"] = LOGO
+                              changed = True
+                          if not node.get("url"):
+                              node["url"] = BASE
+                              changed = True
+                      for value in list(node.values()):
+                          walk(value)
+                  elif isinstance(node, list):
+                      for value in node:
+                          walk(value)
+
+              walk(data)
+              return json.dumps(data, ensure_ascii=False, indent=2) if changed else None
+
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              if 'rel="icon"' not in text and "rel='icon'" not in text:
+                  text = text.replace('<head>', '<head>\n<link rel="icon" type="image/webp" href="' + FAVICON + '"/>', 1)
+
+              def replace_script(match):
+                  updated = enrich_jsonld(match.group(2))
+                  if updated is None:
+                      return match.group(0)
+                  return match.group(1) + "\n" + updated + "\n" + match.group(3)
+
+              text = script_re.sub(replace_script, text)
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  print('updated', path)
+
+          PY
+
+      - name: Remove one-time workflow
+        run: rm -f .github/workflows/brand-logo-integration.yml
+
+      - name: Commit brand integration
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "SEO: integrate Bee Marketing logo and favicon"
+            git push
+          fi
