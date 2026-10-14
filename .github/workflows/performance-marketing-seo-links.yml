@@ -1,0 +1,85 @@
+name: Performance Marketing SEO Links
+
+on:
+  push:
+    paths:
+      - '.github/workflows/performance-marketing-seo-links.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Separate service intent from case-study intent
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          money = 'performance-marketing-agency-pakistan.html'
+
+          # Services hub: add a strong contextual internal link to the new money page.
+          p = Path('services.html')
+          s = p.read_text(encoding='utf-8')
+          if money not in s:
+              m = re.search(r'(<div class="hero-copy">.*?<p>)(.*?)(</p>)', s, flags=re.S)
+              if not m:
+                  raise SystemExit('Services hero paragraph not found')
+              addition = ' For a revenue-focused approach, explore our <a href="performance-marketing-agency-pakistan.html" style="text-decoration:underline;text-underline-offset:3px;font-weight:600">performance marketing agency services in Pakistan</a>.'
+              replacement = m.group(1) + m.group(2).rstrip() + addition + m.group(3)
+              s = s[:m.start()] + replacement + s[m.end():]
+          p.write_text(s, encoding='utf-8')
+
+          # Existing performance-marketing.html remains a proof/case-study asset, not the commercial landing page.
+          p = Path('performance-marketing.html')
+          s = p.read_text(encoding='utf-8')
+          s = re.sub(r'<title>.*?</title>', '<title>Performance Marketing Case Studies | Bee Marketing</title>', s, count=1, flags=re.S)
+          s = re.sub(r'<meta(?=[^>]*\bname=["\']description["\'])[^>]*>', '<meta name="description" content="Performance marketing case studies from Bee Marketing covering paid media systems, creative testing, ROAS control, ecommerce growth and scalable acquisition."/>', s, count=1, flags=re.I)
+          canonical = '<link rel="canonical" href="https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/performance-marketing.html"/>'
+          if 'rel="canonical"' not in s:
+              marker = '<meta name="description" content="Performance marketing case studies from Bee Marketing covering paid media systems, creative testing, ROAS control, ecommerce growth and scalable acquisition."/>'
+              s = s.replace(marker, marker + '\n' + canonical, 1)
+          s = s.replace('aria-label="Usama Ghaffar home" class="brand" href="index.html">Usama Ghaffar</a>', 'aria-label="Bee Marketing home" class="brand" href="index.html">Bee Marketing</a>', 1)
+          if money not in s:
+              old = 'I design, execute and scale performance marketing systems that connect audience research, full-funnel strategy, creative testing, budget control and conversion data—so ad spend becomes measurable business growth.'
+              new = 'I design, execute and scale <a href="performance-marketing-agency-pakistan.html" style="text-decoration:underline;text-underline-offset:3px">performance marketing systems for brands in Pakistan</a> that connect audience research, full-funnel strategy, creative testing, budget control and conversion data—so ad spend becomes measurable business growth.'
+              if old in s:
+                  s = s.replace(old, new, 1)
+              else:
+                  raise SystemExit('Portfolio hero copy pattern not found')
+          p.write_text(s, encoding='utf-8')
+
+          # Homepage: add one contextual link to the performance marketing money page without changing the H1.
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          if money not in s:
+              body_i = s.find('<body>')
+              head, body = s[:body_i], s[body_i:]
+              phrase = 'measurable performance marketing'
+              if phrase in body:
+                  body = body.replace(phrase, '<a href="performance-marketing-agency-pakistan.html" aria-label="Performance marketing agency in Pakistan" style="text-decoration:underline;text-underline-offset:3px">measurable performance marketing</a>', 1)
+              else:
+                  raise SystemExit('Homepage performance marketing phrase not found')
+              s = head + body
+          p.write_text(s, encoding='utf-8')
+
+          # Validate.
+          assert money in Path('services.html').read_text(encoding='utf-8')
+          assert money in Path('performance-marketing.html').read_text(encoding='utf-8')
+          assert money in Path('index.html').read_text(encoding='utf-8')
+          portfolio = Path('performance-marketing.html').read_text(encoding='utf-8')
+          assert 'Performance Marketing Case Studies | Bee Marketing' in portfolio
+          assert 'rel="canonical"' in portfolio
+
+      - name: Commit changes and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/performance-marketing-seo-links.yml
+          git add index.html services.html performance-marketing.html
+          git commit -m "SEO: separate performance marketing service and case studies"
+          git push
