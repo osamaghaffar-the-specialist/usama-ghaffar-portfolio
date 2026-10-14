@@ -1,0 +1,206 @@
+name: Homepage SEO Reposition
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/homepage-seo-reposition.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-homepage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply homepage SEO and conversion updates
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path("index.html")
+          text = path.read_text(encoding="utf-8")
+
+          def replace_once(old, new, label):
+              global text
+              if old in text:
+                  text = text.replace(old, new, 1)
+                  print(f"UPDATED: {label}")
+              elif new in text:
+                  print(f"ALREADY UPDATED: {label}")
+              else:
+                  raise SystemExit(f"Expected source text not found for: {label}")
+
+          replace_once(
+              "<title>Usama Ghaffar — Performance Marketing &amp; AI Systems Agency</title>",
+              "<title>Digital Marketing Agency Pakistan | Ecommerce Growth — Usama</title>",
+              "SEO title",
+          )
+
+          replace_once(
+              '<meta content="Founder-led performance marketing and AI systems agency building paid media, creative, conversion-focused websites and automation into one measurable growth engine." name="description"/>',
+              '<meta content="Digital marketing agency in Pakistan helping ecommerce brands grow with Meta Ads, Google Ads, CRO, SEO and conversion-focused performance marketing." name="description"/>',
+              "meta description",
+          )
+
+          if 'rel="canonical" href="https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"' not in text:
+              marker = '<meta content="#FFFFFF" name="theme-color"/>'
+              social = '''<link rel="canonical" href="https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Digital Marketing Agency Pakistan | Ecommerce Growth — Usama"/>
+<meta property="og:description" content="Digital marketing agency in Pakistan helping ecommerce brands grow with Meta Ads, Google Ads, CRO, SEO and conversion-focused performance marketing."/>
+<meta property="og:url" content="https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Digital Marketing Agency Pakistan | Ecommerce Growth — Usama"/>
+<meta name="twitter:description" content="Digital marketing agency in Pakistan helping ecommerce brands grow with Meta Ads, Google Ads, CRO, SEO and conversion-focused performance marketing."/>'''
+              if marker not in text:
+                  raise SystemExit("Theme-color marker not found for canonical/social metadata")
+              text = text.replace(marker, social + "\n" + marker, 1)
+              print("UPDATED: canonical and social metadata")
+
+          if 'id="homepage-entity-schema"' not in text:
+              marker = '<style>\n  :root{'
+              schema = '''<script id="homepage-entity-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/#person",
+      "name": "Usama Ghaffar",
+      "url": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/",
+      "jobTitle": "Performance Marketer",
+      "sameAs": [
+        "https://www.linkedin.com/in/usama-ghaffar",
+        "https://www.instagram.com/usamaghaffar_/"
+      ],
+      "knowsAbout": [
+        "Meta Ads",
+        "Facebook Ads",
+        "Instagram Ads",
+        "Google Ads",
+        "Performance Marketing",
+        "Ecommerce Growth",
+        "Conversion Rate Optimization",
+        "Search Engine Optimization"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/#organization",
+      "name": "Usama Ghaffar",
+      "url": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/",
+      "founder": {
+        "@id": "https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/#person"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Pakistan"
+      },
+      "description": "Performance marketing and ecommerce growth services for brands in Pakistan, including Meta Ads, Google Ads, conversion strategy, SEO and growth systems."
+    }
+  ]
+}
+</script>
+'''
+              if marker not in text:
+                  raise SystemExit("Primary style marker not found for schema insertion")
+              text = text.replace(marker, schema + marker, 1)
+              print("UPDATED: Person and Organization schema")
+
+          replacements = [
+              (
+                  '<a class="glass-cta" href="contact.html#project-brief">Book a Call</a>',
+                  '<a class="glass-cta" href="contact.html#project-brief">Free Growth Audit</a>',
+                  "desktop header CTA",
+              ),
+              (
+                  '<a class="mobile-menu-cta" href="contact.html#project-brief">Book a Call →</a>',
+                  '<a class="mobile-menu-cta" href="contact.html#project-brief">Free Growth Audit →</a>',
+                  "mobile header CTA",
+              ),
+              (
+                  '<div class="eyebrow">Usama Ghaffar · Performance Marketer &amp; AI Specialist</div>',
+                  '<div class="eyebrow">Performance Marketing for Pakistani Ecommerce Brands</div>',
+                  "hero eyebrow",
+              ),
+              (
+                  '<h1>We Build Intelligent Growth <span class="accent">Systems for Ambitious Brands</span></h1>',
+                  '<h1>Digital Marketing Agency in Pakistan <span class="accent">Built for Ecommerce Growth</span></h1>',
+                  "hero H1",
+              ),
+              (
+                  '<p class="lead">Data-driven advertising, AI-powered creative production, high-converting websites, and intelligent automation — all working together to grow your brand profitably.</p>',
+                  '<p class="lead">We help ecommerce and growing brands turn paid traffic into profitable sales through Meta Ads, Google Ads, conversion strategy, creative testing and measurable performance marketing.</p>',
+                  "hero lead",
+              ),
+              (
+                  '<a class="btn-primary" href="contact.html#project-brief">Find Your Growth Gaps →</a>',
+                  '<a class="btn-primary" href="contact.html#project-brief">Get a Free Growth Audit →</a>',
+                  "hero primary CTA",
+              ),
+              (
+                  '<a class="btn-secondary" href="performance-marketing.html">See How We Scale</a>',
+                  '<a class="btn-secondary" href="performance-marketing.html">See Ecommerce Results</a>',
+                  "hero secondary CTA",
+              ),
+              (
+                  '<p class="trusted-heading">Platforms &amp; Systems We Build Across</p>',
+                  '<p class="trusted-heading">Meta Ads · Google Ads · Shopify · CRO · SEO · Automation</p>',
+                  "trust strip heading",
+              ),
+              (
+                  '<span class="ug-section-label">Connected Account Proof</span>',
+                  '<span class="ug-section-label">Ecommerce Performance Proof</span>',
+                  "results section label",
+              ),
+              (
+                  '<h2>Real Growth Happens When Every Performance Signal Works Together.</h2>',
+                  '<h2>Performance Marketing Built Around Revenue, Not Vanity Metrics.</h2>',
+                  "results heading",
+              ),
+          ]
+
+          for old, new, label in replacements:
+              replace_once(old, new, label)
+
+          path.write_text(text, encoding="utf-8")
+
+      - name: Validate homepage output
+        shell: python
+        run: |
+          from pathlib import Path
+          text = Path("index.html").read_text(encoding="utf-8")
+          checks = {
+              "new title": "Digital Marketing Agency Pakistan | Ecommerce Growth — Usama",
+              "canonical": 'rel="canonical" href="https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/"',
+              "schema": 'id="homepage-entity-schema"',
+              "hero H1": "Digital Marketing Agency in Pakistan",
+              "Pakistan positioning": "Pakistani Ecommerce Brands",
+              "primary CTA": "Get a Free Growth Audit",
+              "results proof": "Performance Marketing Built Around Revenue, Not Vanity Metrics.",
+          }
+          missing = [name for name, needle in checks.items() if needle not in text]
+          if missing:
+              raise SystemExit("Validation failed: " + ", ".join(missing))
+          if text.count("<h1>") != 1:
+              raise SystemExit(f"Expected one H1, found {text.count('<h1>')}")
+          print("Homepage SEO validation passed")
+
+      - name: Commit homepage update
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No homepage changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "SEO: reposition homepage for Pakistan ecommerce growth"
+          git push
