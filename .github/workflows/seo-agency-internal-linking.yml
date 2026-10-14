@@ -1,0 +1,62 @@
+name: SEO Agency Internal Linking
+
+on:
+  push:
+    paths:
+      - '.github/workflows/seo-agency-internal-linking.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add contextual links to SEO money page
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          target = 'seo-agency-pakistan.html'
+
+          # Services hub: add the dedicated SEO landing page to the hero's service map.
+          p = Path('services.html')
+          s = p.read_text(encoding='utf-8')
+          if target not in s:
+              m = re.search(r'(<div class="hero-copy">.*?<p>)(.*?)(</p>)', s, flags=re.S)
+              if not m:
+                  raise SystemExit('Services hero paragraph not found')
+              addition = ' For sustainable organic growth, explore our <a href="seo-agency-pakistan.html" style="text-decoration:underline;text-underline-offset:3px;font-weight:600">SEO agency and SEO services in Pakistan</a>.'
+              replacement = m.group(1) + m.group(2).rstrip() + addition + m.group(3)
+              s = s[:m.start()] + replacement + s[m.end():]
+          p.write_text(s, encoding='utf-8')
+
+          # Homepage: turn the first visible SEO mention into a contextual internal link.
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          if target not in s:
+              marker = '<body>'
+              i = s.find(marker)
+              if i == -1:
+                  raise SystemExit('Homepage body not found')
+              head, body = s[:i], s[i:]
+              if 'SEO' not in body:
+                  raise SystemExit('No visible SEO mention found in homepage body')
+              body = body.replace('SEO', '<a href="seo-agency-pakistan.html" aria-label="SEO agency in Pakistan" style="text-decoration:underline;text-underline-offset:3px">SEO</a>', 1)
+              s = head + body
+          p.write_text(s, encoding='utf-8')
+
+          assert target in Path('services.html').read_text(encoding='utf-8')
+          assert target in Path('index.html').read_text(encoding='utf-8')
+
+      - name: Commit updates and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/seo-agency-internal-linking.yml
+          git add index.html services.html
+          git commit -m "SEO: link SEO agency page across site"
+          git push
