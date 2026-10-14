@@ -1,0 +1,59 @@
+name: On-page SEO Audit Cleanup
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/onpage-audit-cleanup.yml'
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply title and meta cleanup
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+            'web-development-agency-pakistan.html': [
+              ('<title>Web Development Agency Pakistan | Website Agency | Bee Marketing</title>', '<title>Web Development Agency Pakistan | Bee Marketing</title>'),
+              ('<meta name="description" content="Web development agency in Pakistan building conversion-focused business and ecommerce websites with SEO-ready structure, fast performance, tracking and marketing integration."/>', '<meta name="description" content="Web development agency in Pakistan building conversion-focused business and ecommerce websites with SEO-ready structure, speed, tracking and marketing integration."/>'),
+            ],
+            'ecommerce-agency-pakistan.html': [
+              ('<meta name="description" content="Ecommerce agency in Pakistan helping online stores grow through Meta Ads, Google Ads, CRO, Shopify strategy, creative testing and profitable performance marketing."/>', '<meta name="description" content="Ecommerce agency in Pakistan helping online stores grow through Meta Ads, Google Ads, CRO, Shopify strategy, creative testing and performance marketing."/>'),
+            ],
+            'seo-agency-pakistan.html': [
+              ('<meta name="description" content="SEO agency in Pakistan helping ecommerce and service brands grow qualified organic traffic through technical SEO, content strategy, on-page SEO and authority building."/>', '<meta name="description" content="SEO agency in Pakistan helping ecommerce and service brands grow qualified organic traffic through technical SEO, content, on-page SEO and authority building."/>'),
+            ],
+            'performance-marketing-agency-pakistan.html': [
+              ('<meta name="description" content="Performance marketing agency in Pakistan helping ecommerce and growth brands scale through Meta Ads, Google Ads, CRO, creative testing and revenue-focused optimization."/>', '<meta name="description" content="Performance marketing agency in Pakistan helping ecommerce brands scale through Meta Ads, Google Ads, CRO, creative testing and revenue-focused optimization."/>'),
+            ],
+          }
+
+          changed = []
+          for filename, pairs in replacements.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              original = text
+              for old, new in pairs:
+                  if old not in text:
+                      raise SystemExit(f'Expected text not found in {filename}: {old}')
+                  text = text.replace(old, new, 1)
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(filename)
+          print('Updated:', ', '.join(changed))
+          PY
+      - name: Commit cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web-development-agency-pakistan.html ecommerce-agency-pakistan.html seo-agency-pakistan.html performance-marketing-agency-pakistan.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "SEO: clean title and meta lengths after audit"
+            git push
+          fi
