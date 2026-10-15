@@ -1,0 +1,42 @@
+name: Wire Lahore industry pages
+on:
+  push:
+    paths:
+      - '.github/workflows/lahore-industry-internal-links.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add internal links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          block = '''\n<section style="padding:72px 24px;background:#f7f8fb;border-top:1px solid #e5e7eb"><div style="max-width:1120px;margin:auto"><p style="font-weight:700;color:#5b4fe8;margin:0 0 10px">Lahore industry marketing</p><h2 style="font-size:34px;line-height:1.15;margin:0 0 16px">Industry-specific growth pages</h2><p style="color:#555c6d;max-width:800px">Explore how Bee Marketing approaches demand generation, search visibility, paid media and conversion systems for high-value Lahore business categories.</p><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px"><a href="real-estate-digital-marketing-lahore.html">Real Estate Marketing Lahore</a><a href="clinic-digital-marketing-lahore.html">Clinic Marketing Lahore</a><a href="restaurant-digital-marketing-lahore.html">Restaurant Marketing Lahore</a><a href="education-marketing-agency-lahore.html">Education Marketing Lahore</a><a href="salon-digital-marketing-lahore.html">Salon Marketing Lahore</a></div></div></section>\n'''
+          targets = ['digital-marketing-agency-lahore.html','services.html','blog.html']
+          marker = 'Industry-specific growth pages'
+          for name in targets:
+              p = Path(name)
+              s = p.read_text(encoding='utf-8')
+              if marker in s:
+                  continue
+              if '</main>' in s:
+                  s = s.replace('</main>', block + '</main>', 1)
+              elif '</body>' in s:
+                  s = s.replace('</body>', block + '</body>', 1)
+              else:
+                  s += block
+              p.write_text(s, encoding='utf-8')
+          PY
+      - name: Remove one-time workflow
+        run: rm .github/workflows/lahore-industry-internal-links.yml
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digital-marketing-agency-lahore.html services.html blog.html .github/workflows/lahore-industry-internal-links.yml
+          git commit -m "SEO: link Lahore industry cluster across site" || exit 0
+          git push
