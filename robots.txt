@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio/sitemap.xml
+Sitemap: https://beemarketingagency.work/sitemap.xml
