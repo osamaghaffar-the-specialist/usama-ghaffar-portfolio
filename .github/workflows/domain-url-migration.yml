@@ -1,0 +1,81 @@
+name: Migrate SEO URLs to custom domain
+
+on:
+  push:
+    paths:
+      - '.github/workflows/domain-url-migration.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Replace old GitHub Pages base URL
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          old = 'https://osamaghaffar-the-specialist.github.io/usama-ghaffar-portfolio'
+          new = 'https://beemarketingagency.work'
+
+          targets = list(Path('.').glob('*.html')) + [Path('sitemap.xml'), Path('robots.txt')]
+          changed = []
+          before = 0
+          after = 0
+
+          for p in targets:
+              if not p.exists() or not p.is_file():
+                  continue
+              text = p.read_text(encoding='utf-8')
+              count = text.count(old)
+              before += count
+              if count:
+                  text = text.replace(old, new)
+                  p.write_text(text, encoding='utf-8')
+                  changed.append((str(p), count))
+              after += text.count(old)
+
+          print('OLD_URL_OCCURRENCES_BEFORE=', before)
+          print('OLD_URL_OCCURRENCES_AFTER=', after)
+          print('CHANGED_FILES=')
+          for name, count in changed:
+              print(f'  {name}: {count}')
+
+          if before == 0:
+              raise SystemExit('No old-domain references found in target site files; refusing no-op migration.')
+          if after != 0:
+              raise SystemExit(f'Old-domain references remain after migration: {after}')
+
+          sitemap = Path('sitemap.xml').read_text(encoding='utf-8')
+          robots = Path('robots.txt').read_text(encoding='utf-8')
+          if 'https://beemarketingagency.work/' not in sitemap:
+              raise SystemExit('New custom domain not found in sitemap.xml')
+          if 'Sitemap: https://beemarketingagency.work/sitemap.xml' not in robots:
+              raise SystemExit('robots.txt sitemap was not migrated')
+
+          # Basic canonical guard for pages that already declare a canonical.
+          for p in Path('.').glob('*.html'):
+              text = p.read_text(encoding='utf-8')
+              if 'rel="canonical"' in text and 'href="https://beemarketingagency.work' not in text:
+                  raise SystemExit(f'Canonical did not migrate in {p}')
+          PY
+
+      - name: Commit migrated SEO URLs
+        shell: bash
+        run: |
+          git config user.name "Usama Ghaffar"
+          git config user.email "osamaghaffar001@gmail.com"
+          git add -- '*.html' sitemap.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No site URL changes to commit"
+          else
+            git commit -m "SEO: migrate canonical URLs to custom domain"
+            git push
+          fi
