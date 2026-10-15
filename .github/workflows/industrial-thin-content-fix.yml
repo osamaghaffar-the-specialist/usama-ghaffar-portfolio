@@ -1,0 +1,38 @@
+name: Enrich industrial vertical pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/industrial-thin-content-fix.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add useful industry-specific depth
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          additions = {
+            'rice-mill-marketing-pakistan.html': '<h2>Buyer-facing proof matters</h2><p>Serious rice buyers often want confidence in consistency, supply capability and commercial responsiveness before contacting a mill. We can organize approved company information, buyer FAQs and enquiry paths so prospects can qualify the business faster without publishing unsupported quality or certification claims.</p>',
+            'steel-mill-marketing-pakistan.html': '<h2>Search demand can be segmented by application</h2><p>Industrial buyers may search by material category, project use, supply requirement or procurement need. Where those differences are commercially meaningful, separate pages can improve relevance for both organic search and paid campaigns while keeping the website easier for procurement teams to navigate.</p>',
+            'packaging-factory-marketing-pakistan.html': '<h2>Commercial content should answer buyer questions</h2><p>High-intent buyers may need information about packaging format, application, customization context, production capability and quotation steps before reaching sales. Clear buyer-focused pages can reduce repetitive questions and help the sales team receive better-prepared enquiries.</p>'
+          }
+          for name, block in additions.items():
+              p = Path(name)
+              txt = p.read_text()
+              if block not in txt:
+                  txt = txt.replace('<p>Related:', block + '<p>Related:')
+                  p.write_text(txt)
+          PY
+      - name: Remove one-time workflow
+        run: rm .github/workflows/industrial-thin-content-fix.yml
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rice-mill-marketing-pakistan.html steel-mill-marketing-pakistan.html packaging-factory-marketing-pakistan.html .github/workflows/industrial-thin-content-fix.yml
+          git commit -m "SEO: deepen rice steel and packaging vertical pages"
+          git push
