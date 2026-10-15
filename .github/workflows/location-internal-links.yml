@@ -1,0 +1,58 @@
+name: Wire Lahore location pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/location-internal-links.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add internal links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          hub = Path('digital-marketing-agency-lahore.html')
+          s = hub.read_text(encoding='utf-8')
+          replacements = {
+            '<div class="area"><strong>DHA Lahore</strong><span>Service area · location content planned</span></div>': '<a class="area" href="digital-marketing-agency-dha-lahore.html"><strong>DHA Lahore</strong><span>Dedicated local growth page →</span></a>',
+            '<div class="area"><strong>Gulberg Lahore</strong><span>Service area · location content planned</span></div>': '<a class="area" href="digital-marketing-agency-gulberg-lahore.html"><strong>Gulberg Lahore</strong><span>Dedicated local growth page →</span></a>',
+            '<div class="area"><strong>Johar Town</strong><span>Service area · location content planned</span></div>': '<a class="area" href="digital-marketing-agency-johar-town-lahore.html"><strong>Johar Town</strong><span>Dedicated local growth page →</span></a>',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f'Missing expected hub snippet: {old}')
+              s = s.replace(old, new, 1)
+          hub.write_text(s, encoding='utf-8')
+
+          block = '''\n<div class="bee-local-links" style="max-width:1240px;margin:18px auto 0;padding:18px 32px;border-top:1px solid rgba(11,14,20,.10);font-size:13px;line-height:1.8;color:#555C6D">\n  <strong style="color:#0B0E14">Bee Marketing Lahore:</strong>\n  <a href="digital-marketing-agency-lahore.html">Digital Marketing Agency Lahore</a> ·\n  <a href="digital-marketing-agency-bahria-town-lahore.html">Bahria Town Lahore</a> ·\n  <a href="digital-marketing-agency-dha-lahore.html">DHA Lahore</a> ·\n  <a href="digital-marketing-agency-gulberg-lahore.html">Gulberg Lahore</a> ·\n  <a href="digital-marketing-agency-johar-town-lahore.html">Johar Town Lahore</a>\n</div>\n'''
+          for filename in ['index.html', 'services.html']:
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              if 'digital-marketing-agency-lahore.html' not in text:
+                  if '</footer>' in text:
+                      text = text.replace('</footer>', block + '</footer>', 1)
+                  elif '</body>' in text:
+                      text = text.replace('</body>', block + '</body>', 1)
+                  else:
+                      raise SystemExit(f'No footer/body close in {filename}')
+                  p.write_text(text, encoding='utf-8')
+          PY
+      - name: Remove one-time workflow
+        run: rm -f .github/workflows/location-internal-links.yml
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add digital-marketing-agency-lahore.html index.html services.html .github/workflows/location-internal-links.yml
+          git commit -m "SEO: link Lahore location cluster across site"
+          git push
