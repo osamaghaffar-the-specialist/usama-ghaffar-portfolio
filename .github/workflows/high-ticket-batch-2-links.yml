@@ -1,0 +1,46 @@
+name: Wire high-ticket batch 2
+on:
+  push:
+    branches: [seo-high-ticket-batch-2-actual]
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo-high-ticket-batch-2-actual
+      - name: Add internal links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def inject(path, marker, block):
+              p=Path(path)
+              s=p.read_text(encoding='utf-8')
+              if marker in s:
+                  return
+              needle='</main>' if '</main>' in s else '</body>'
+              s=s.replace(needle, block+'\n'+needle, 1)
+              p.write_text(s, encoding='utf-8')
+
+          inject('corporate-digital-marketing-agency-pakistan.html','high-ticket-batch-2-links', '''\n<!-- high-ticket-batch-2-links -->\n<section style="padding:58px 24px;background:#f7f8fb"><div style="max-width:1050px;margin:auto"><h2>Corporate & B2B growth services</h2><p>Explore dedicated growth systems for <a href="b2b-lead-generation-agency-pakistan.html"><strong>B2B lead generation</strong></a>, <a href="enterprise-digital-marketing-agency-pakistan.html"><strong>enterprise marketing</strong></a>, <a href="manufacturer-digital-marketing-pakistan.html"><strong>manufacturers</strong></a> and <a href="exporter-digital-marketing-pakistan.html"><strong>exporters</strong></a> in Pakistan.</p></div></section>''')
+
+          inject('education-marketing-agency-lahore.html','higher-education-deep-link', '''\n<!-- higher-education-deep-link -->\n<section style="padding:52px 24px;background:#f7f8fb"><div style="max-width:900px;margin:auto"><h2>Higher education admissions</h2><p>Universities and colleges have different programme-level search and counselling journeys. See our dedicated <a href="university-college-marketing-lahore.html"><strong>University & College Marketing in Lahore</strong></a> page.</p></div></section>''')
+
+          inject('digital-marketing-agency-lahore.html','high-ticket-lahore-batch-2', '''\n<!-- high-ticket-lahore-batch-2 -->\n<section style="padding:58px 24px;background:#f7f8fb"><div style="max-width:1050px;margin:auto"><h2>More high-ticket industries in Lahore</h2><p>Bee Marketing also supports <a href="law-firm-digital-marketing-lahore.html"><strong>law firms</strong></a>, <a href="automotive-dealership-marketing-lahore.html"><strong>automotive dealerships</strong></a>, <a href="construction-company-marketing-lahore.html"><strong>construction companies</strong></a> and <a href="university-college-marketing-lahore.html"><strong>universities & colleges</strong></a> with search-led acquisition and measurable lead systems.</p></div></section>''')
+
+          inject('services.html','high-ticket-services-batch-2', '''\n<!-- high-ticket-services-batch-2 -->\n<section style="padding:58px 24px;background:#f7f8fb"><div style="max-width:1100px;margin:auto"><h2>High-ticket, B2B & enterprise growth</h2><p>Dedicated industry pages: <a href="law-firm-digital-marketing-lahore.html">Law Firms</a> · <a href="automotive-dealership-marketing-lahore.html">Automotive Dealerships</a> · <a href="construction-company-marketing-lahore.html">Construction</a> · <a href="university-college-marketing-lahore.html">Universities & Colleges</a> · <a href="manufacturer-digital-marketing-pakistan.html">Manufacturers</a> · <a href="exporter-digital-marketing-pakistan.html">Exporters</a> · <a href="b2b-lead-generation-agency-pakistan.html">B2B Lead Generation</a> · <a href="enterprise-digital-marketing-agency-pakistan.html">Enterprise Marketing</a>.</p></div></section>''')
+
+          inject('blog.html','high-ticket-blog-batch-2', '''\n<!-- high-ticket-blog-batch-2 -->\n<section style="padding:56px 24px;background:#f7f8fb"><div style="max-width:1050px;margin:auto"><h2>Industry growth resources</h2><p>Explore Bee Marketing's commercial pages for <a href="b2b-lead-generation-agency-pakistan.html">B2B lead generation</a>, <a href="manufacturer-digital-marketing-pakistan.html">manufacturers</a>, <a href="exporter-digital-marketing-pakistan.html">exporters</a>, <a href="law-firm-digital-marketing-lahore.html">law firms</a> and <a href="construction-company-marketing-lahore.html">construction companies</a>.</p></div></section>''')
+          PY
+      - name: Remove one-time workflow
+        run: rm .github/workflows/high-ticket-batch-2-links.yml
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "SEO: link high-ticket batch 2 across site"
+          git push origin HEAD:seo-high-ticket-batch-2-actual
