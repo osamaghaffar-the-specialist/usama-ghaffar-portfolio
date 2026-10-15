@@ -1,0 +1,62 @@
+name: Wire deeper industrial vertical cluster
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/industrial-deep-links.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add industrial sitemap URLs and internal links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          sitemap = Path('sitemap.xml')
+          s = sitemap.read_text()
+          anchor = '  <url><loc>https://beemarketingagency.work/mill-marketing-agency-pakistan.html</loc></url>\n'
+          additions = ''.join([
+              '  <url><loc>https://beemarketingagency.work/textile-mill-marketing-pakistan.html</loc></url>\n',
+              '  <url><loc>https://beemarketingagency.work/garment-factory-marketing-pakistan.html</loc></url>\n',
+              '  <url><loc>https://beemarketingagency.work/rice-mill-marketing-pakistan.html</loc></url>\n',
+              '  <url><loc>https://beemarketingagency.work/steel-mill-marketing-pakistan.html</loc></url>\n',
+              '  <url><loc>https://beemarketingagency.work/packaging-factory-marketing-pakistan.html</loc></url>\n',
+              '  <url><loc>https://beemarketingagency.work/pharmaceutical-manufacturer-marketing-pakistan.html</loc></url>\n',
+          ])
+          if 'textile-mill-marketing-pakistan.html' not in s:
+              s = s.replace(anchor, anchor + additions)
+              sitemap.write_text(s)
+
+          replacements = {
+            'factory-marketing-agency-pakistan.html': (
+              'For factory owners, a good website should clearly communicate production categories, technical strengths, certifications, location coverage, buyer types and next steps. We connect this with our broader <a href="manufacturer-digital-marketing-pakistan.html">manufacturer digital marketing</a> and <a href="b2b-lead-generation-agency-pakistan.html">B2B lead generation</a> systems.',
+              'For factory owners, a good website should clearly communicate production categories, technical strengths, certifications, location coverage, buyer types and next steps. We connect this with our broader <a href="manufacturer-digital-marketing-pakistan.html">manufacturer digital marketing</a> and <a href="b2b-lead-generation-agency-pakistan.html">B2B lead generation</a> systems. For deeper industry-specific acquisition, see <a href="garment-factory-marketing-pakistan.html">garment factory marketing</a>, <a href="packaging-factory-marketing-pakistan.html">packaging factory marketing</a> and <a href="pharmaceutical-manufacturer-marketing-pakistan.html">pharmaceutical manufacturer marketing</a>.'
+            ),
+            'textile-marketing-agency-pakistan.html': (
+              'Textile businesses can connect this strategy with our <a href="exporter-digital-marketing-pakistan.html">exporter digital marketing</a>, <a href="manufacturer-digital-marketing-pakistan.html">manufacturer marketing</a> and <a href="b2b-lead-generation-agency-pakistan.html">B2B lead generation</a> services.',
+              'Textile businesses can connect this strategy with our <a href="exporter-digital-marketing-pakistan.html">exporter digital marketing</a>, <a href="manufacturer-digital-marketing-pakistan.html">manufacturer marketing</a> and <a href="b2b-lead-generation-agency-pakistan.html">B2B lead generation</a> services. Textile owners can also explore our dedicated <a href="textile-mill-marketing-pakistan.html">textile mill marketing</a> and <a href="garment-factory-marketing-pakistan.html">garment factory marketing</a> pages.'
+            ),
+            'mill-marketing-agency-pakistan.html': (
+              'Mill owners can also use our <a href="factory-marketing-agency-pakistan.html">factory marketing</a>, <a href="manufacturer-digital-marketing-pakistan.html">manufacturer digital marketing</a> and <a href="textile-marketing-agency-pakistan.html">textile marketing</a> strategies where relevant.',
+              'Mill owners can also use our <a href="factory-marketing-agency-pakistan.html">factory marketing</a>, <a href="manufacturer-digital-marketing-pakistan.html">manufacturer digital marketing</a> and <a href="textile-marketing-agency-pakistan.html">textile marketing</a> strategies where relevant. Dedicated vertical pages are available for <a href="rice-mill-marketing-pakistan.html">rice mills</a>, <a href="steel-mill-marketing-pakistan.html">steel mills</a> and <a href="textile-mill-marketing-pakistan.html">textile mills</a>.'
+            )
+          }
+          for name, (old, new) in replacements.items():
+              p = Path(name)
+              txt = p.read_text()
+              if old in txt and new not in txt:
+                  p.write_text(txt.replace(old, new))
+          PY
+      - name: Remove one-time workflow
+        run: rm .github/workflows/industrial-deep-links.yml
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml factory-marketing-agency-pakistan.html textile-marketing-agency-pakistan.html mill-marketing-agency-pakistan.html .github/workflows/industrial-deep-links.yml
+          git commit -m "SEO: link deeper industrial vertical cluster"
+          git push
