@@ -1,0 +1,173 @@
+name: Build industrial city cluster 1
+on:
+  push:
+    branches: [industrial-city-cluster-1]
+    paths: ['.github/workflows/industrial-city-cluster-1.yml']
+permissions:
+  contents: write
+jobs:
+  build-city-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: industrial-city-cluster-1
+      - name: Generate city manufacturing pages
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import html, json
+
+          cities = [
+            {
+              'slug':'manufacturing-marketing-agency-faisalabad.html',
+              'city':'Faisalabad',
+              'title':'Manufacturing Marketing Agency Faisalabad | Bee Marketing',
+              'meta':'Digital marketing for Faisalabad manufacturers using industrial SEO, Google Ads, RFQ funnels, export lead generation, websites and CRM tracking.',
+              'eyebrow':'Textile and industrial growth · Faisalabad',
+              'hero':'Digital Marketing for Manufacturers in Faisalabad',
+              'intro':'Bee Marketing serves manufacturers in Faisalabad with B2B SEO, Google Ads, export and distributor lead generation, RFQ-focused websites, conversion tracking and CRM-supported follow-up.',
+              'quick':'Faisalabad manufacturers compete in a dense industrial market. Strong digital marketing should make products, production capability, certifications, buyer segments and quotation paths easy to understand for local and international buyers.',
+              'industries':['Textile spinning, weaving and processing','Garments, hosiery and home textiles','Chemicals, dyes and industrial inputs','Flour, sugar, feed and food production','Engineering, pumps, plastics and packaging'],
+              'context':'Faisalabad is one of Pakistan’s strongest manufacturing centres, with deep textile activity alongside chemicals, food processing, engineering and other industrial sectors. That makes search visibility around real capabilities and buyer intent especially important.',
+              'buyers':'procurement teams, textile buyers, wholesalers, distributors, sourcing companies, export buyers and industrial partners',
+              'local':'Khurrianwala, Jaranwala Road, M-3 Industrial City, Value Addition City and the wider Faisalabad industrial belt',
+              'source_url':'https://faisalabad.punjab.gov.pk/district_profile',
+              'source_label':'Government of Punjab — Faisalabad District Profile',
+              'related':[('textile-marketing-agency-pakistan.html','textile marketing'),('textile-mill-marketing-pakistan.html','textile mill marketing'),('garment-factory-marketing-pakistan.html','garment factory marketing')]
+            },
+            {
+              'slug':'manufacturing-marketing-agency-sialkot.html',
+              'city':'Sialkot',
+              'title':'Manufacturing Marketing Agency Sialkot | Bee Marketing',
+              'meta':'Digital marketing for Sialkot manufacturers and exporters in sports goods, surgical instruments, leather, apparel and industrial products.',
+              'eyebrow':'Export manufacturing growth · Sialkot',
+              'hero':'Digital Marketing for Manufacturers in Sialkot',
+              'intro':'Bee Marketing serves Sialkot manufacturers and exporters with international B2B SEO, Google Ads, buyer-focused landing pages, distributor lead generation, RFQ tracking and export marketing systems.',
+              'quick':'Sialkot manufacturing is strongly export-oriented. Digital marketing should help overseas buyers quickly verify products, categories, certifications, production capability, export experience and the next step for a sample, quotation or wholesale enquiry.',
+              'industries':['Surgical instruments and medical devices','Sports goods and sportswear','Leather goods, gloves and protective products','Apparel, uniforms and private-label manufacturing','Export-oriented industrial suppliers'],
+              'context':'Sialkot has internationally oriented clusters in surgical instruments, sports goods, leather products and related manufacturing. The strongest digital strategy is therefore built around buyer trust, export-market search demand and technically accurate product information.',
+              'buyers':'importers, distributors, private-label brands, sourcing agents, hospital suppliers, sports buyers and international wholesalers',
+              'local':'Small Industrial Estate, Daska Road, Pasrur Road, Ugoki Road and other manufacturing corridors around Sialkot',
+              'source_url':'https://tdap.gov.pk/directorate-general-punjab/',
+              'source_label':'Trade Development Authority of Pakistan — Punjab / Sialkot',
+              'related':[('surgical-instrument-manufacturer-marketing-pakistan.html','surgical instrument marketing'),('sports-goods-manufacturer-marketing-pakistan.html','sports goods marketing'),('leather-tannery-marketing-pakistan.html','leather marketing')]
+            },
+            {
+              'slug':'manufacturing-marketing-agency-gujranwala.html',
+              'city':'Gujranwala',
+              'title':'Manufacturing Marketing Agency Gujranwala | Bee Marketing',
+              'meta':'Industrial digital marketing for Gujranwala manufacturers using B2B SEO, Google Ads, lead generation, capability pages, RFQ funnels and CRM tracking.',
+              'eyebrow':'Industrial B2B growth · Gujranwala',
+              'hero':'Digital Marketing for Manufacturers in Gujranwala',
+              'intro':'Bee Marketing serves Gujranwala manufacturers with industrial SEO, Google Ads, B2B lead generation, technical websites, RFQ funnels and CRM measurement built around real buyer intent.',
+              'quick':'Gujranwala has a broad manufacturing base, so generic agency messaging is rarely enough. Manufacturers need category-specific pages that show products, production capability, quality standards, service regions and clear commercial enquiry routes.',
+              'industries':['Metal cookware and steel products','Electrical appliances and components','Ceramics, pottery and sanitary products','Plastics, polymers, pipes and fittings','Heavy machinery, spare parts and auto parts'],
+              'context':'Gujranwala is a major industrial cluster with thousands of manufacturers across household appliances, metal products, ceramics, plastics, chemicals, machinery, spare parts and steel-related categories.',
+              'buyers':'distributors, wholesalers, retailers, contractors, procurement teams, industrial buyers and export partners',
+              'local':'Small Industrial Estates and manufacturing corridors across Gujranwala and the surrounding industrial region',
+              'source_url':'https://tdap.gov.pk/directorate-general-punjab/',
+              'source_label':'Trade Development Authority of Pakistan — Gujranwala industrial profile',
+              'related':[('engineering-factory-marketing-pakistan.html','engineering factory marketing'),('auto-parts-manufacturer-marketing-pakistan.html','auto parts marketing'),('plastic-factory-marketing-pakistan.html','plastic factory marketing')]
+            },
+            {
+              'slug':'manufacturing-marketing-agency-karachi.html',
+              'city':'Karachi',
+              'title':'Manufacturing Marketing Agency Karachi | Bee Marketing',
+              'meta':'B2B digital marketing for Karachi manufacturers across pharma, chemicals, packaging, garments, engineering, auto parts and industrial supply.',
+              'eyebrow':'Industrial demand generation · Karachi',
+              'hero':'Digital Marketing for Manufacturers in Karachi',
+              'intro':'Bee Marketing serves Karachi manufacturers and industrial suppliers through B2B SEO, Google Ads, capability-led websites, RFQ funnels, distributor acquisition and CRM-supported tracking.',
+              'quick':'Karachi has multiple large industrial zones and a wide mix of manufacturing categories. A strong acquisition system should separate product intent, industrial buyer intent and export enquiries rather than sending every visitor to one generic company page.',
+              'industries':['Pharmaceutical and healthcare manufacturing','Chemicals, paints and industrial inputs','Packaging, printing and plastics','Garments and value-added manufacturing','Auto parts, engineering and metal products'],
+              'context':'Karachi’s industrial footprint spans SITE, Korangi, Landhi, Bin Qasim, North Karachi and other manufacturing zones. Official investment and industrial sources identify pharmaceuticals, chemicals, packaging, garments, auto parts and related sectors across these areas.',
+              'buyers':'procurement teams, distributors, institutional buyers, wholesalers, exporters, importers and industrial partners',
+              'local':'SITE, Korangi Industrial Area, Landhi, Bin Qasim, North Karachi Industrial Area and other Karachi manufacturing zones',
+              'source_url':'https://tdap.gov.pk/wp-content/uploads/2022/02/investment_book_revD.pdf',
+              'source_label':'Trade Development Authority of Pakistan — Trade & Manufacturing Hub',
+              'related':[('pharmaceutical-manufacturer-marketing-pakistan.html','pharmaceutical manufacturer marketing'),('chemical-manufacturer-marketing-pakistan.html','chemical manufacturer marketing'),('packaging-factory-marketing-pakistan.html','packaging factory marketing')]
+            },
+            {
+              'slug':'manufacturing-marketing-agency-multan.html',
+              'city':'Multan',
+              'title':'Manufacturing Marketing Agency Multan | Bee Marketing',
+              'meta':'Digital marketing for Multan manufacturers in textiles, food processing, agriculture, fertilizers, ceramics and industrial supply.',
+              'eyebrow':'Agri-industrial growth · Multan',
+              'hero':'Digital Marketing for Manufacturers in Multan',
+              'intro':'Bee Marketing serves Multan manufacturers and agri-industrial businesses with B2B SEO, Google Ads, distributor lead generation, export landing pages, RFQ systems and CRM tracking.',
+              'quick':'Multan combines agriculture-led trade with textile, food, fertilizer and manufacturing activity. Marketing should connect each product line to the right buyer type instead of relying on broad traffic or social reach alone.',
+              'industries':['Textile weaving, yarn and home textiles','Food processing and agri-based manufacturing','Fertilizers and agricultural inputs','Ceramics, pottery and value-added products','Agricultural machinery and industrial suppliers'],
+              'context':'TDAP describes the Multan region as strongly agriculture-based, with home textiles, yarn, grey fabric, leather, agricultural products and machinery among important products, while district industry includes textiles, fertilizers and food processing.',
+              'buyers':'distributors, wholesalers, procurement teams, retailers, export buyers, agricultural trade partners and institutional purchasers',
+              'local':'Multan’s industrial corridors, Vehari Road markets and the wider South Punjab manufacturing and trade region',
+              'source_url':'https://tdap.gov.pk/multan-district/',
+              'source_label':'Trade Development Authority of Pakistan — Multan District',
+              'related':[('food-processing-marketing-pakistan.html','food processing marketing'),('textile-marketing-agency-pakistan.html','textile marketing'),('exporter-digital-marketing-pakistan.html','exporter digital marketing')]
+            },
+            {
+              'slug':'manufacturing-marketing-agency-lahore.html',
+              'city':'Lahore',
+              'title':'Manufacturing Marketing Agency Lahore | Bee Marketing',
+              'meta':'Industrial digital marketing for Lahore manufacturers across textiles, pharma, auto parts, food, chemicals, steel, packaging and plastics.',
+              'eyebrow':'Manufacturing growth · Lahore',
+              'hero':'Digital Marketing for Manufacturers in Lahore',
+              'intro':'Bee Marketing serves Lahore manufacturers with industrial SEO, Google Ads, B2B lead generation, conversion-focused capability pages, quotation funnels and CRM-supported follow-up.',
+              'quick':'Lahore manufacturers operate across many categories and buyer types. The website and campaigns should clearly separate products, capabilities, industries served and commercial enquiry paths so serious buyers can qualify themselves quickly.',
+              'industries':['Textiles, garments, leather and footwear','Pharmaceutical and healthcare manufacturing','Automobile and auto parts','Food and beverage processing','Chemicals, steel, packaging, plastics and building materials'],
+              'context':'Official Lahore district information identifies a broad manufacturing base spanning textiles, leather, pharmaceuticals, auto parts, food and beverages, chemicals, steel and metal fabrication, printing and packaging, plastics and related sectors.',
+              'buyers':'procurement teams, distributors, retailers, contractors, institutional buyers, wholesalers and export partners',
+              'local':'Lahore’s industrial corridors and the wider Lahore–Sheikhupura manufacturing belt, while Bee Marketing serves businesses across Lahore without claiming additional branch offices',
+              'source_url':'https://tdap.gov.pk/lahore-district/',
+              'source_label':'Trade Development Authority of Pakistan — Lahore District',
+              'related':[('manufacturer-digital-marketing-pakistan.html','manufacturer digital marketing Pakistan'),('factory-marketing-agency-pakistan.html','factory marketing'),('b2b-lead-generation-agency-pakistan.html','B2B lead generation')]
+            }
+          ]
+
+          css = "body{margin:0;font-family:Arial,sans-serif;color:#0b0e14;line-height:1.72;background:#fff}a{color:#4b3fd8}.wrap{max-width:1120px;margin:auto;padding:0 24px}.narrow{max-width:900px}header{border-bottom:1px solid #e6e7eb}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.nav a{text-decoration:none;color:inherit;margin-left:18px}.hero{padding:92px 0;background:linear-gradient(180deg,#fff,#f6f7fb)}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:0 0 22px;letter-spacing:-2px}.hero p{max-width:820px;color:#555c6d;font-size:19px}.section{padding:72px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid #e5e7eb;border-radius:18px;padding:24px;background:#fafbfc}.section h2{font-size:34px;line-height:1.15}.section p,.section li{color:#555c6d}.box{padding:24px;border:1px solid #dddfea;border-radius:16px;background:#f8f9fc}.faq details{padding:18px 0;border-bottom:1px solid #e5e7eb}.dark{background:#0b0e14;color:#fff}.dark p{color:#c7cbd3}.btn{display:inline-block;background:#fff;color:#0b0e14!important;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:700}.source{font-size:14px;color:#6b7280;border-left:3px solid #dddfea;padding-left:14px}@media(max-width:760px){.nav nav{display:none}.grid{grid-template-columns:1fr}}"
+
+          def make_page(c):
+              url='https://beemarketingagency.work/'+c['slug']
+              related=' · '.join(f'<a href="{u}">{t}</a>' for u,t in c['related'])
+              industry_cards=''.join(f'<div class="card"><h3>{html.escape(x)}</h3><p>Build dedicated search visibility, buyer messaging and enquiry paths around this manufacturing category.</p></div>' for x in c['industries'][:3])
+              industry_list=''.join(f'<li>{html.escape(x)}</li>' for x in c['industries'])
+              schema={"@context":"https://schema.org","@graph":[
+                {"@type":"BreadcrumbList","itemListElement":[
+                  {"@type":"ListItem","position":1,"name":"Home","item":"https://beemarketingagency.work/"},
+                  {"@type":"ListItem","position":2,"name":"Manufacturer Digital Marketing Pakistan","item":"https://beemarketingagency.work/manufacturer-digital-marketing-pakistan.html"},
+                  {"@type":"ListItem","position":3,"name":c['hero'],"item":url}]},
+                {"@type":"Service","name":c['hero'],"serviceType":"Industrial SEO, Google Ads, B2B lead generation, RFQ funnels, websites and CRM tracking","provider":{"@type":"Organization","name":"Bee Marketing","url":"https://beemarketingagency.work/","logo":"https://beemarketingagency.work/assets/bee-marketing-logo.webp"},"areaServed":{"@type":"City","name":c['city']},"url":url},
+                {"@type":"FAQPage","mainEntity":[
+                  {"@type":"Question","name":f'Can Bee Marketing work with manufacturers in {c["city"]}?',"acceptedAnswer":{"@type":"Answer","text":f'Yes. Bee Marketing serves manufacturers in {c["city"]} remotely and through digital delivery. We do not claim a local branch office unless one actually exists.'}},
+                  {"@type":"Question","name":"Can you generate distributor, wholesale or export enquiries?","acceptedAnswer":{"@type":"Answer","text":"Campaigns can be structured around distributor, wholesale, procurement and export-buyer intent, while actual lead volume depends on demand, offer strength, product fit and competition."}},
+                  {"@type":"Question","name":"Do you guarantee contracts or purchase orders?","acceptedAnswer":{"@type":"Answer","text":"No. We build measurable acquisition systems and improve qualified enquiry flow, while contracts depend on pricing, capability, certifications, logistics and the sales process."}}
+                ]}
+              ]}
+              return f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/><title>{html.escape(c['title'])}</title><meta name="description" content="{html.escape(c['meta'])}"/><link rel="canonical" href="{url}"/><link rel="icon" type="image/webp" href="assets/favicon.webp"/><meta property="og:type" content="website"/><meta property="og:title" content="{html.escape(c['title'])}"/><meta property="og:description" content="{html.escape(c['meta'])}"/><meta property="og:url" content="{url}"/><script type="application/ld+json">{json.dumps(schema,separators=(',',':'))}</script><style>{css}</style></head><body><header><div class="wrap nav"><a href="index.html"><strong>Bee Marketing</strong></a><nav><a href="manufacturer-digital-marketing-pakistan.html">Manufacturing</a><a href="exporter-digital-marketing-pakistan.html">Exporters</a><a href="contact.html">Contact</a></nav></div></header><main><section class="hero"><div class="wrap"><p><strong>{html.escape(c['eyebrow'])}</strong></p><h1>{html.escape(c['hero'])}</h1><p>{html.escape(c['intro'])}</p></div></section><section class="section"><div class="wrap narrow"><div class="box"><strong>Quick answer:</strong><p>{html.escape(c['quick'])}</p></div><h2>Why {html.escape(c['city'])} needs industry-specific marketing</h2><p>{html.escape(c['context'])}</p><p class="source">Industry context source: <a href="{c['source_url']}" rel="nofollow noopener" target="_blank">{html.escape(c['source_label'])}</a>.</p><h2>Manufacturing sectors we can support</h2><ul>{industry_list}</ul><div class="grid">{industry_cards}</div><h2>Who we target</h2><p>Depending on the product and market, campaigns can be designed around {html.escape(c['buyers'])}. We do not treat every form submission as equal; quotation context, buyer type, geography, quantity and product fit can be used to improve lead quality.</p><h2>Search demand before social reach</h2><p>Industrial buyers often search by product, specification, material, supplier type, application or location. We build SEO and Google Ads around those real commercial search patterns, then use landing pages that make the next step obvious: request a quote, ask for specifications, discuss private label, contact sales or start a distributor conversation.</p><h2>Local industrial context</h2><p>For {html.escape(c['city'])}, the strategy can reflect {html.escape(c['local'])}. Location is used to improve relevance and buyer context, not to fabricate offices, local teams or addresses that do not exist.</p><h2>Website and RFQ conversion system</h2><p>A manufacturer website should explain capabilities without overwhelming buyers. Useful sections may include product families, materials, applications, production capacity where appropriate, quality systems, industries served, export markets, certifications supplied by the company and structured RFQ fields. CRM tracking can then connect each enquiry back to the channel and landing page that created it.</p><h2>Related industrial services</h2><p>{related}. You can also review our national <a href="manufacturer-digital-marketing-pakistan.html">manufacturer digital marketing Pakistan</a> and <a href="exporter-digital-marketing-pakistan.html">exporter marketing</a> services.</p><div class="faq"><h2>FAQ</h2><details open><summary>Do you have to be physically located in {html.escape(c['city'])} to work with manufacturers there?</summary><p>No. Bee Marketing serves manufacturers digitally and does not present a branch office where one does not exist.</p></details><details><summary>Can campaigns focus on serious B2B enquiries instead of general traffic?</summary><p>Yes. We can optimize around RFQs, wholesale enquiries, distributor leads, qualified form fields and tracked sales stages when the business has a measurable follow-up process.</p></details><details><summary>Can you support export-focused manufacturers?</summary><p>Yes. Search strategy, landing pages and buyer messaging can be built for international markets, but export performance still depends on product-market fit, pricing, compliance, logistics and sales execution.</p></details><details><summary>Do you guarantee contracts or purchase orders?</summary><p>No. We improve visibility, demand capture and lead qualification; contracts depend on the manufacturer’s wider commercial offer and sales process.</p></details></div></div></section><section class="section dark"><div class="wrap narrow"><h2>Want a {html.escape(c['city'])} manufacturing growth audit?</h2><p>Share your product categories, buyer markets and current website. We can map the strongest search, lead-generation and conversion opportunities.</p><a class="btn" href="contact.html">Request a Free Industrial Growth Audit</a></div></section></main></body></html>'''
+
+          for c in cities:
+              Path(c['slug']).write_text(make_page(c), encoding='utf-8')
+
+          sitemap=Path('sitemap.xml').read_text(encoding='utf-8')
+          entries=''.join(f'  <url><loc>https://beemarketingagency.work/{c["slug"]}</loc></url>\n' for c in cities if f'https://beemarketingagency.work/{c["slug"]}' not in sitemap)
+          sitemap=sitemap.replace('</urlset>', entries+'</urlset>')
+          Path('sitemap.xml').write_text(sitemap, encoding='utf-8')
+
+          p=Path('manufacturer-digital-marketing-pakistan.html')
+          txt=p.read_text(encoding='utf-8')
+          marker='<h2>B2B acquisition channels</h2>'
+          city_section='<h2>Manufacturing city guides</h2><p>Explore industry-specific growth strategies for <a href="manufacturing-marketing-agency-faisalabad.html">Faisalabad manufacturers</a>, <a href="manufacturing-marketing-agency-sialkot.html">Sialkot manufacturers and exporters</a>, <a href="manufacturing-marketing-agency-gujranwala.html">Gujranwala manufacturers</a>, <a href="manufacturing-marketing-agency-karachi.html">Karachi manufacturers</a>, <a href="manufacturing-marketing-agency-multan.html">Multan manufacturers</a> and <a href="manufacturing-marketing-agency-lahore.html">Lahore manufacturers</a>. Each guide reflects the city’s real industrial mix without claiming offices that do not exist.</p>'
+          if city_section not in txt:
+              txt=txt.replace(marker, city_section+marker)
+              p.write_text(txt, encoding='utf-8')
+          PY
+      - name: Remove one-time workflow
+        run: rm -f .github/workflows/industrial-city-cluster-1.yml
+      - name: Commit generated city cluster
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "SEO: publish industrial city cluster 1"
+          git push origin industrial-city-cluster-1
