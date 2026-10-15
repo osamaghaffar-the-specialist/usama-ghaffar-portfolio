@@ -1,0 +1,70 @@
+name: Wire industrial city niche batch 3
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/wire-industrial-city-niche-batch3.yml']
+permissions:
+  contents: write
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add sitemap and internal links
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          new_pages = [
+            'home-textile-manufacturer-marketing-faisalabad.html',
+            'leather-manufacturer-marketing-sialkot.html',
+            'plastic-manufacturer-marketing-gujranwala.html',
+            'chemical-manufacturer-marketing-karachi.html',
+            'agri-input-manufacturer-marketing-multan.html',
+            'food-manufacturer-marketing-lahore.html',
+          ]
+
+          p = Path('sitemap.xml')
+          s = p.read_text()
+          lines = ''.join(f'  <url><loc>https://beemarketingagency.work/{x}</loc></url>\n' for x in new_pages if f'https://beemarketingagency.work/{x}' not in s)
+          if lines:
+            s = s.replace('</urlset>', lines + '</urlset>')
+            p.write_text(s)
+
+          p = Path('manufacturer-digital-marketing-pakistan.html')
+          s = p.read_text()
+          anchor = '<h2>B2B acquisition channels</h2>'
+          block = '<h2>Third city-industry expansion</h2><p>Our latest city-industry strategies cover <a href="home-textile-manufacturer-marketing-faisalabad.html">Faisalabad home textile manufacturers</a>, <a href="leather-manufacturer-marketing-sialkot.html">Sialkot leather manufacturers</a>, <a href="plastic-manufacturer-marketing-gujranwala.html">Gujranwala plastic manufacturers</a>, <a href="chemical-manufacturer-marketing-karachi.html">Karachi chemical manufacturers</a>, <a href="agri-input-manufacturer-marketing-multan.html">Multan agri-input manufacturers</a> and <a href="food-manufacturer-marketing-lahore.html">Lahore food manufacturers</a>. Each page is built around a distinct buyer journey rather than duplicating one generic city template.</p>'
+          if block not in s and anchor in s:
+            s = s.replace(anchor, block + anchor)
+            p.write_text(s)
+
+          hub_links = {
+            'manufacturing-marketing-agency-faisalabad.html': ('home-textile-manufacturer-marketing-faisalabad.html','home textile manufacturers'),
+            'manufacturing-marketing-agency-sialkot.html': ('leather-manufacturer-marketing-sialkot.html','leather manufacturers'),
+            'manufacturing-marketing-agency-gujranwala.html': ('plastic-manufacturer-marketing-gujranwala.html','plastic manufacturers'),
+            'manufacturing-marketing-agency-karachi.html': ('chemical-manufacturer-marketing-karachi.html','chemical manufacturers'),
+            'manufacturing-marketing-agency-multan.html': ('agri-input-manufacturer-marketing-multan.html','agri-input manufacturers'),
+            'manufacturing-marketing-agency-lahore.html': ('food-manufacturer-marketing-lahore.html','food manufacturers'),
+          }
+          for filename,(href,label) in hub_links.items():
+            p = Path(filename)
+            s = p.read_text()
+            if href in s:
+              continue
+            marker = '<div class="faq"><h2>FAQ</h2>'
+            addition = f'<h2>More industry-specific support</h2><p>For a deeper buyer-intent strategy, see our <a href="{href}">{label}</a> page for this city.</p>'
+            if marker in s:
+              s = s.replace(marker, addition + marker)
+              p.write_text(s)
+          PY
+      - name: Remove one-time workflow
+        run: rm .github/workflows/wire-industrial-city-niche-batch3.yml
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml manufacturer-digital-marketing-pakistan.html manufacturing-marketing-agency-*.html .github/workflows/wire-industrial-city-niche-batch3.yml
+          git commit -m "SEO: connect industrial city niche batch 3"
+          git push
