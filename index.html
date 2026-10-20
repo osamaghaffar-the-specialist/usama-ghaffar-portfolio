@@ -1837,6 +1837,7 @@ img,svg,canvas{max-width:100%}
 <div class="hero-actions">
 <a class="btn-primary" href="contact.html#project-brief">Get a Free Growth Audit →</a>
 <a class="btn-secondary" href="ecommerce-agency-pakistan.html">Explore Ecommerce Growth</a>
+<a class="btn-secondary" href="https://wa.me/923154294157" target="_blank" rel="noopener noreferrer" data-cta-location="homepage_hero">WhatsApp Us ↗</a>
 </div>
 </div>
 <div class="bee-stage">
@@ -3418,5 +3419,20 @@ img,svg,canvas{max-width:100%}
     }
   })();
 </script>
-<script>document.addEventListener("visibilitychange",()=>{document.documentElement.classList.toggle("page-hidden",document.hidden)});</script></body>
+<script>document.addEventListener("visibilitychange",()=>{document.documentElement.classList.toggle("page-hidden",document.hidden)});</script>
+<!-- Bee Marketing: WhatsApp intent tracking (not a confirmed lead) -->
+<script>
+  document.addEventListener('click', function(event) {
+    var link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (!/^https:\/\/(?:wa\.me\/|api\.whatsapp\.com\/send(?:\?|\/|$)|wa\.link\/)/i.test(href)) return;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {
+        cta_location: link.getAttribute('data-cta-location') || 'other'
+      });
+    }
+  }, true);
+</script>
+</body>
 </html>
