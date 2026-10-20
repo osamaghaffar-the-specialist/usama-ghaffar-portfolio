@@ -144,7 +144,7 @@
       <p>Bee Marketing helps ecommerce brands and service businesses in Bahria Town Lahore generate qualified leads, sales and measurable growth through Meta Ads, Google Ads, SEO, conversion-focused websites and marketing automation.</p>
       <div class="actions">
         <a class="btn btn-dark" href="contact.html">Get a Free Growth Audit</a>
-        <a class="btn btn-light" href="https://wa.me/923154294157" rel="noopener">WhatsApp Bee Marketing</a>
+        <a class="btn btn-light" href="https://wa.me/923154294157" data-cta-location="local_hero" rel="noopener">WhatsApp Bee Marketing</a>
       </div>
     </div>
     <aside class="local-card" aria-label="Bee Marketing local business details">
@@ -261,5 +261,20 @@
     <div class="legal">© 2026 Bee Marketing. Selected campaign results are historical examples and are not guarantees of future performance.</div>
   </div>
 </footer>
+
+<!-- Bee Marketing: WhatsApp intent tracking (not a confirmed lead) -->
+<script>
+  document.addEventListener('click', function(event) {
+    var link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (!/^https:\/\/(?:wa\.me\/|api\.whatsapp\.com\/send(?:\?|\/|$)|wa\.link\/)/i.test(href)) return;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {
+        cta_location: link.getAttribute('data-cta-location') || 'other'
+      });
+    }
+  }, true);
+</script>
 </body>
 </html>

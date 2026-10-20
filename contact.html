@@ -496,7 +496,7 @@ img,svg,canvas{max-width:100%}
 <span class="eyebrow">Contact / Start with context</span>
 <h1>Let’s turn the right conversation <span class="soft">into momentum.</span></h1>
 <p>Share the business problem, the opportunity or the system that is slowing growth. We’ll begin with context, focus the conversation and find the most valuable next move.</p>
-<div class="contact-actions"><a class="btn btn-dark" href="#project-brief">Start a Project Brief <span>↓</span></a><a class="btn btn-light" href="mailto:info@beemarketingagency.work">Email Directly <span>↗</span></a></div>
+<div class="contact-actions"><a class="btn btn-dark" href="#project-brief">Start a Project Brief <span>↓</span></a><a class="btn btn-light" href="mailto:info@beemarketingagency.work">Email Directly <span>↗</span></a><a class="btn btn-light" href="https://wa.me/923154294157" target="_blank" rel="noopener noreferrer" data-cta-location="contact_hero">WhatsApp Us <span>↗</span></a></div>
 <ul class="contact-proof"><li><i></i>Founder-led contact</li><li><i></i>Clear next step</li><li><i></i>No pitch maze</li></ul>
 <div class="contact-channels">
 <a class="channel-link" href="mailto:info@beemarketingagency.work"><span aria-hidden="true" class="channel-icon"><svg viewbox="0 0 24 24"><path d="M3 6.5h18v11H3zM3.5 7l8.5 6 8.5-6"></path></svg></span><span class="channel-copy"><span>Email</span><strong>info@beemarketingagency.work</strong></span></a>
@@ -745,5 +745,20 @@ img,svg,canvas{max-width:100%}
       });
     })();
 </script>
-<script>document.addEventListener("visibilitychange",()=>{document.documentElement.classList.toggle("page-hidden",document.hidden)});</script></body>
+<script>document.addEventListener("visibilitychange",()=>{document.documentElement.classList.toggle("page-hidden",document.hidden)});</script>
+<!-- Bee Marketing: WhatsApp intent tracking (not a confirmed lead) -->
+<script>
+  document.addEventListener('click', function(event) {
+    var link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (!/^https:\/\/(?:wa\.me\/|api\.whatsapp\.com\/send(?:\?|\/|$)|wa\.link\/)/i.test(href)) return;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {
+        cta_location: link.getAttribute('data-cta-location') || 'other'
+      });
+    }
+  }, true);
+</script>
+</body>
 </html>
