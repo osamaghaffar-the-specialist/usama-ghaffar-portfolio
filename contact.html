@@ -724,14 +724,13 @@ img,svg,canvas{max-width:100%}
 
           message.textContent = 'Thank you — your project brief has been sent successfully. We’ll get back to you soon.';
           message.className = 'form-message success';
-          // GTM dataLayer event: fires only after Web3Forms confirms submission.
-          // Never include names, email addresses, phone numbers, or form responses.
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: 'generate_lead',
-            form_id: 'contactForm',
-            lead_type: 'project_inquiry'
-          });
+          // Report only confirmed form success; do not send visitor personal data.
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              form_id: 'contactForm',
+              lead_type: 'project_inquiry'
+            });
+          }
           form.reset();
           fields.forEach(field => field.setAttribute('aria-invalid', 'false'));
         } catch (error) {
