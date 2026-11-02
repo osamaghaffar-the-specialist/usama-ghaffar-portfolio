@@ -2888,8 +2888,13 @@ img,svg,canvas{max-width:100%}
     }
 
     const clock = new THREE.Clock();
-    function animate(){
+    let lastHeroFrame = 0;
+    function animate(now){
       requestAnimationFrame(animate);
+      // Limit expensive WebGL draws; page visuals and timing remain unchanged.
+      now = now || performance.now();
+      if (document.hidden || now - lastHeroFrame < 33) return;
+      lastHeroFrame = now;
       const el = clock.getElapsedTime();
       const t = el % SEQ;
 
@@ -3129,8 +3134,12 @@ img,svg,canvas{max-width:100%}
     }
 
     const clk = new THREE.Clock();
-    function tick(){
+    let lastServiceFrame = 0;
+    function tick(now){
       requestAnimationFrame(tick);
+      now = now || performance.now();
+      if (document.hidden || now - lastServiceFrame < 33) return;
+      lastServiceFrame = now;
       const el = clk.getElapsedTime();
       scenes.forEach(({scene,cam,r,bee,wings,seed,visible})=>{
         if(!visible) return;
@@ -3295,8 +3304,12 @@ img,svg,canvas{max-width:100%}
       curYaw = dx >= 0 ? 0.9 : -0.9;
     }
 
-    function tick(){
+    let lastFeaturedFrame = 0;
+    function tick(now){
       requestAnimationFrame(tick);
+      now = now || performance.now();
+      if (document.hidden || now - lastFeaturedFrame < 33) return;
+      lastFeaturedFrame = now;
       if(!visible) return;
       const el = clk.getElapsedTime();
 
