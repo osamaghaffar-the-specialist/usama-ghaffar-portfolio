@@ -2663,6 +2663,9 @@ img,svg,canvas{max-width:100%}
     const canvas = document.getElementById('beeCanvas');
     if(!canvas || !window.THREE) return;
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Pilot: mobile GPU shadow maps and multisampling are expensive for this hero.
+    // Preserve full quality on desktop; compare mobile screenshots before merge.
+    const mobileHero = window.innerWidth < 820;
 
     const scene = new THREE.Scene();
 
@@ -2671,10 +2674,10 @@ img,svg,canvas{max-width:100%}
     camera.position.set(3.4, 1.1, 5.2);
     camera.lookAt(0, 0.5, 0);
 
-    const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true, powerPreference:"high-performance"});
+    const renderer = new THREE.WebGLRenderer({canvas, antialias:!mobileHero, alpha:true, powerPreference:"high-performance"});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 820 ? 1 : 1.5));
     renderer.outputEncoding = THREE.sRGBEncoding;
-    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.enabled = !mobileHero;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     function resize(){
@@ -2690,8 +2693,8 @@ img,svg,canvas{max-width:100%}
     // large diffused key from upper-left
     const key = new THREE.DirectionalLight(0xffffff, 1.15);
     key.position.set(-4, 6, 4);
-    key.castShadow = true;
-    key.shadow.mapSize.set(window.innerWidth < 820 ? 512 : 1024, window.innerWidth < 820 ? 512 : 1024);
+    key.castShadow = !mobileHero;
+    if (!mobileHero) key.shadow.mapSize.set(1024, 1024);
     scene.add(key);
     // gentle front fill
     const fill = new THREE.DirectionalLight(0xf4f5ff, 0.5);
