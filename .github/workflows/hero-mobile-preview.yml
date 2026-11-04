@@ -1,0 +1,65 @@
+name: Hero Mobile Performance Preview
+on:
+  pull_request:
+    paths:
+      - index.html
+      - tools/hero-mobile-review.mjs
+      - .github/workflows/hero-mobile-preview.yml
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-baseline
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 lighthouse@12.8.2
+          npx playwright install --with-deps chromium
+      - name: Serve pull request version locally
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/bee-preview-server.log 2>&1 &
+          for i in {1..25}; do
+            curl -fsS http://127.0.0.1:8765/ -o /dev/null && break
+            sleep 1
+          done
+      - name: Serve main baseline on matched localhost port
+        run: |
+          (cd main-baseline && python3 -m http.server 8766 --bind 127.0.0.1) > /tmp/bee-baseline-server.log 2>&1 &
+          for i in {1..25}; do
+            curl -fsS http://127.0.0.1:8766/ -o /dev/null && break
+            sleep 1
+          done
+      - name: Compare main versus PR preview on mobile
+        run: node tools/hero-mobile-review.mjs
+      - name: Lighthouse mobile matched-environment comparison
+        shell: bash
+        run: |
+          mkdir -p hero-review-output/lighthouse
+          for candidate in live preview; do
+            case "$candidate" in
+              live) url='http://127.0.0.1:8766/' ;;
+              preview) url='http://127.0.0.1:8765/' ;;
+            esac
+            for trial in 1 2; do
+              npx lighthouse "$url" --chrome-flags="--headless --no-sandbox" --form-factor=mobile --screenEmulation.mobile=true --screenEmulation.width=390 --screenEmulation.height=844 --screenEmulation.deviceScaleFactor=1 --throttling-method=simulate --only-categories=performance,accessibility,seo --output=json --output-path="hero-review-output/lighthouse/${candidate}-${trial}.json" --quiet
+            done
+          done
+      - name: Summarize Lighthouse metrics
+        run: python3 tools/summarize-hero-lighthouse.py
+      - name: Upload browser screenshots and comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hero-mobile-preview
+          path: hero-review-output/
+          retention-days: 14
+          if-no-files-found: warn
