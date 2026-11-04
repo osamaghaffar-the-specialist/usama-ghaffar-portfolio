@@ -540,7 +540,7 @@ img,svg,canvas{max-width:100%}
 <div class="field"><label for="fullName">Your name <span class="field-meta">Required *</span></label><input autocomplete="name" id="fullName" name="name" placeholder="Your full name" required="" type="text"/></div>
 <div class="field"><label for="workEmail">Work email <span class="field-meta">Required *</span></label><input autocomplete="email" id="workEmail" name="email" placeholder="you@company.com" required="" type="email"/></div>
 <div class="field"><label for="company">Company / brand <span class="field-meta">Optional</span></label><input autocomplete="organization" id="company" name="company" placeholder="Company name" type="text"/></div>
-<div class="field"><label for="projectType">What can we help with? <span class="field-meta">Required *</span></label><select id="projectType" name="project" required=""><option value="">Choose a focus</option><option>Performance marketing</option><option>AI creative &amp; content systems</option><option>Website / conversion experience</option><option>Automation &amp; AI systems</option><option>Integrated growth engagement</option><option>Not sure yet</option></select></div>
+<div class="field"><label for="projectType">What can we help with? <span class="field-meta">Required *</span></label><select id="projectType" name="project" required=""><option value="">Choose a focus</option><option>Performance marketing</option><option>SEO / organic growth</option><option>Google Ads / PPC</option><option>Meta Ads / Facebook &amp; Instagram</option><option>Ecommerce / Shopify growth</option><option>Conversion tracking / analytics</option><option>AI creative &amp; content systems</option><option>Website / conversion experience</option><option>Automation &amp; AI systems</option><option>Integrated growth engagement</option><option>Not sure yet</option></select></div>
 <div class="field full"><label for="projectBrief">Project context <span class="field-meta">Required *</span></label><textarea aria-describedby="briefHelp" id="projectBrief" name="brief" placeholder="What are you trying to improve, what is getting in the way, and what would a strong outcome look like?" required=""></textarea><span class="field-help" id="briefHelp">No polished brief needed—clear context is enough.</span></div>
 <div aria-live="polite" class="form-message" id="formMessage" role="status"></div>
 <div class="form-bottom"><button class="btn btn-dark" type="submit">Send Project Brief <span>↗</span></button></div>
@@ -675,6 +675,21 @@ img,svg,canvas{max-width:100%}
         });
       }
 
+      // Preselect the relevant service when a visitor arrives from a money-page CTA.
+      // Only predefined options are accepted; do not place personal data in URLs.
+      const serviceChoices = {
+        seo: 'SEO / organic growth',
+        google_ads: 'Google Ads / PPC',
+        meta_ads: 'Meta Ads / Facebook & Instagram',
+        ecommerce: 'Ecommerce / Shopify growth',
+        performance: 'Performance marketing'
+      };
+      const requestedService = new URLSearchParams(window.location.search).get('service');
+      const serviceSelect = document.getElementById('projectType');
+      const choice = requestedService && serviceChoices[requestedService];
+      if (choice && serviceSelect && [...serviceSelect.options].some(option => option.value === choice)) {
+        serviceSelect.value = choice;
+      }
       const form = document.getElementById('contactForm');
       const message = document.getElementById('formMessage');
       const fields = [...form.querySelectorAll('input, select, textarea')];

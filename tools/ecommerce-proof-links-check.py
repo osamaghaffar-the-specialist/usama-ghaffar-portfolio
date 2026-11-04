@@ -21,7 +21,7 @@ proof=parse("performance-marketing.html")
 assert "performance-marketing.html#case-01" in service.links,"Ecommerce service needs direct case proof link"
 assert "ecommerce-agency-pakistan.html" in proof.links,"Portfolio needs ecommerce service contextual link"
 assert "case-01" in proof.ids,"Case study anchor missing"
-assert "contact.html#project-brief" in service.links,"Consultation CTA missing"
+assert "contact.html?service=ecommerce#project-brief" in service.links,"Consultation CTA missing"
 assert service.canonical==["https://beemarketingagency.work/ecommerce-agency-pakistan.html"],"Service canonical changed"
 assert proof.canonical==["https://beemarketingagency.work/performance-marketing.html"],"Portfolio canonical changed"
 print("PASS: contextual reciprocal navigation, case-study anchor, consultation CTA and canonical URLs")
