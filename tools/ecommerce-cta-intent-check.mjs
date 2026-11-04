@@ -18,5 +18,19 @@ try{
  const matches=events.filter(x=>x[0]==='event'&&x[1]==='contact_cta_click'&&x[2]?.source_page==='ecommerce_agency_pakistan'&&x[2]?.lead_status==='click_intent_only');
  if(matches.length!==1)throw Error('Expected exactly one click-intent event, got '+JSON.stringify(events));
  if(errors.length)throw Error('Page errors: '+errors.join('; '));
- console.log('PASS: consultation CTA sends one anonymous intent-only event; '+count+' project brief links present');
+ const tests = [
+   ['seo','SEO / organic growth'],
+   ['google_ads','Google Ads / PPC'],
+   ['ecommerce','Ecommerce / Shopify growth'],
+   ['performance','Performance marketing']
+ ];
+ for (const [service,expected] of tests) {
+   const check = await browser.newPage();
+   const r=await check.goto('http://127.0.0.1:8765/contact.html?service='+service+'#project-brief',{waitUntil:'domcontentloaded'});
+   if(r?.status()!==200)throw Error('Contact form unavailable for '+service);
+   const selected=await check.locator('#projectType').inputValue();
+   if(selected!==expected)throw Error('Wrong service preselection for '+service+': '+selected);
+   await check.close();
+ }
+ console.log('PASS: consultation CTA intent-only event and four service-specific enquiry preselect routes');
 }finally{await browser.close();}
