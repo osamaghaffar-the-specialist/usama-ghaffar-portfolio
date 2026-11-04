@@ -1,0 +1,46 @@
+name: Homepage Font CLS Experiment
+on:
+  pull_request:
+    paths:
+      - index.html
+      - tools/font-cls-review.mjs
+      - .github/workflows/font-cls-experiment.yml
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-baseline
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve matched baseline and experiment
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/preview.log 2>&1 &
+          (cd main-baseline && python3 -m http.server 8766 --bind 127.0.0.1) > /tmp/main.log 2>&1 &
+          for i in {1..25}; do
+            if curl -fsS http://127.0.0.1:8765/ -o /dev/null && curl -fsS http://127.0.0.1:8766/ -o /dev/null; then break; fi
+            sleep 1
+          done
+      - name: Compare CLS and font rendering
+        run: |
+          mkdir -p font-cls-output
+          node tools/font-cls-review.mjs
+      - name: Upload screenshot and layout shift evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bee-font-cls-experiment
+          path: font-cls-output/
+          retention-days: 14
+          if-no-files-found: error
