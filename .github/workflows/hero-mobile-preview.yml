@@ -13,6 +13,10 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-baseline
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -27,15 +31,22 @@ jobs:
             curl -fsS http://127.0.0.1:8765/ -o /dev/null && break
             sleep 1
           done
-      - name: Compare live homepage versus PR preview on mobile
+      - name: Serve main baseline on matched localhost port
+        run: |
+          (cd main-baseline && python3 -m http.server 8766 --bind 127.0.0.1) > /tmp/bee-baseline-server.log 2>&1 &
+          for i in {1..25}; do
+            curl -fsS http://127.0.0.1:8766/ -o /dev/null && break
+            sleep 1
+          done
+      - name: Compare main versus PR preview on mobile
         run: node tools/hero-mobile-review.mjs
-      - name: Lighthouse mobile baseline and PR preview
+      - name: Lighthouse mobile matched-environment comparison
         shell: bash
         run: |
           mkdir -p hero-review-output/lighthouse
           for candidate in live preview; do
             case "$candidate" in
-              live) url='https://beemarketingagency.work/' ;;
+              live) url='http://127.0.0.1:8766/' ;;
               preview) url='http://127.0.0.1:8765/' ;;
             esac
             for trial in 1 2; do
