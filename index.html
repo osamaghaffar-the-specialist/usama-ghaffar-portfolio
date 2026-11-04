@@ -757,7 +757,7 @@
   }
   .why-icon .folder-icon-img{ width:48px; height:40px; }
   .why-copy{ padding-top:1px; }
-  .why-num{font-family:var(--font-primary); color:var(--slate-dim); font-size:0.78rem; letter-spacing:0.06em; display:block; margin-bottom:6px;}
+  .why-num{font-family:var(--font-primary); color:var(--slate); font-size:0.78rem; letter-spacing:0.06em; display:block; margin-bottom:6px;}
   .why-item h4{font-size:1.05rem; margin-bottom:8px;}
   .why-item p{color:var(--slate); font-size:0.92rem; line-height:1.6;}
 
@@ -1104,12 +1104,12 @@
   footer{border-top:1px solid var(--line); padding:72px 0 32px;}
   .footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:64px;}
   .footer-brand p{color:var(--slate); font-size:0.9rem; line-height:1.6; margin:16px 0 20px; max-width:280px;}
-  .footer-col h5{font-family:var(--font-primary); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--slate-dim); margin-bottom:18px;}
+  .footer-col h5{font-family:var(--font-primary); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--slate); margin-bottom:18px;}
   .footer-col a{display:block; color:var(--slate); font-size:0.9rem; margin-bottom:12px; transition:color .2s;}
   .footer-col a:hover{color:var(--paper);}
   .footer-bottom{
     border-top:1px solid var(--line); padding-top:28px; display:flex; justify-content:space-between;
-    color:var(--slate-dim); font-size:0.82rem; flex-wrap:wrap; gap:12px;
+    color:var(--slate); font-size:0.82rem; flex-wrap:wrap; gap:12px;
   }
   .socials{display:flex; gap:16px;}
 
@@ -1818,7 +1818,7 @@ img,svg,canvas{max-width:100%}
 </div>
 </header>
 <div class="menu-scrim" id="menuScrim"></div>
-<nav aria-hidden="true" class="mobile-menu" id="mobileMenu">
+<nav aria-hidden="true" inert class="mobile-menu" id="mobileMenu">
 <a class="mobile-menu-item active" href="index.html">Home</a>
 <a class="mobile-menu-item" href="services.html">Services</a>
 <a class="mobile-menu-item" href="performance-marketing.html">Portfolio</a>
@@ -1833,7 +1833,7 @@ img,svg,canvas{max-width:100%}
 <div>
 <div class="eyebrow">Performance Marketing for Pakistani Ecommerce Brands</div>
 <h1>Digital Marketing Agency in Pakistan <span class="accent">Built for Ecommerce Growth</span></h1>
-<p class="lead">We help <a href="ecommerce-agency-pakistan.html" aria-label="Ecommerce agency services in Pakistan" style="text-decoration:underline;text-underline-offset:3px">ecommerce brands in Pakistan</a> and other growing businesses turn paid traffic into profitable sales through <a href="facebook-ads-agency-pakistan.html" aria-label="Facebook and Meta Ads agency in Pakistan" style="text-decoration:underline;text-underline-offset:3px">Meta Ads</a>, Google Ads, conversion strategy, creative testing and <a href="performance-marketing-agency-pakistan.html" aria-label="Performance marketing agency in Pakistan" style="text-decoration:underline;text-underline-offset:3px">measurable performance marketing</a>.</p>
+<p class="lead">We help <a href="ecommerce-agency-pakistan.html" aria-label="ecommerce brands in Pakistan" style="text-decoration:underline;text-underline-offset:3px">ecommerce brands in Pakistan</a> and other growing businesses turn paid traffic into profitable sales through <a href="facebook-ads-agency-pakistan.html" aria-label="Facebook and Meta Ads agency in Pakistan" style="text-decoration:underline;text-underline-offset:3px">Meta Ads</a>, Google Ads, conversion strategy, creative testing and <a href="performance-marketing-agency-pakistan.html" aria-label="measurable performance marketing" style="text-decoration:underline;text-underline-offset:3px">measurable performance marketing</a>.</p>
 <div class="hero-actions">
 <a class="btn-primary" href="contact.html#project-brief">Get a Free Growth Audit →</a>
 <a class="btn-secondary" href="ecommerce-agency-pakistan.html">Explore Ecommerce Growth</a>
@@ -2993,6 +2993,7 @@ img,svg,canvas{max-width:100%}
       scrim.classList.remove('open');
       toggle.setAttribute('aria-expanded','false');
       menu.setAttribute('aria-hidden','true');
+      menu.inert = true;
       document.body.style.overflow = '';
     }
     function openMenu(){
@@ -3001,6 +3002,7 @@ img,svg,canvas{max-width:100%}
       scrim.classList.add('open');
       toggle.setAttribute('aria-expanded','true');
       menu.setAttribute('aria-hidden','false');
+      menu.inert = false;
       document.body.style.overflow = 'hidden';
     }
     toggle.addEventListener('click', () => {
