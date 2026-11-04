@@ -2,7 +2,7 @@ import {chromium} from 'playwright';
 import {mkdir,writeFile} from 'node:fs/promises';
 
 const tests=[
- {name:'live-baseline',url:'https://beemarketingagency.work/'},
+ {name:'main-local-baseline',url:'http://127.0.0.1:8766/'},
  {name:'pr-local-preview',url:'http://127.0.0.1:8765/'},
 ];
 await mkdir('hero-review-output',{recursive:true});
@@ -43,7 +43,7 @@ try{
 }finally{await browser.close();}
 const median=values=>{const s=[...values].sort((a,b)=>a-b);return s.length?s[Math.floor(s.length/2)]:null;};
 const summary=Object.fromEntries(tests.map(t=>{const rows=results.filter(x=>x.test===t.name&&!x.error);return [t.name,{successful:rows.length,medianLongTaskTotalMs:median(rows.map(r=>r.longTaskTotalMs)),pageErrorCount:rows.reduce((n,r)=>n+r.errors.length,0),heroCanvasPresent:rows.every(r=>r.heroCanvasPresent),horizontalOverflow:rows.some(r=>r.horizontalOverflow)}];}));
-const caveats=['Localhost pilot and live production may differ due to network, caching, server and third-party behavior.','PerformanceObserver long-task duration is NOT Lighthouse TBT and does not establish Core Web Vitals gains.','Inspect screenshots manually for hero visual regressions. This script never sends forms or clicks outbound links.'];
+const caveats=['Both variants are served locally from main and the PR branch; external Google Fonts and Three.js may still vary due to network and cache.','PerformanceObserver long-task duration is NOT Lighthouse TBT and does not establish Core Web Vitals gains.','Inspect screenshots manually for hero visual regressions. This script never sends forms or clicks outbound links.'];
 await writeFile('hero-review-output/results.json',JSON.stringify({created:new Date().toISOString(),summary,results,caveats},null,2));
 console.log(JSON.stringify(summary,null,2));
 if(results.some(r=>r.error||r.status!==200||r.errors.length))process.exitCode=1;
