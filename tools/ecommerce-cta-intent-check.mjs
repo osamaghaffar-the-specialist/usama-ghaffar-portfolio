@@ -8,6 +8,7 @@ try{
  await page.evaluate(()=>{
   window.__ctaEvents=[];
   window.gtag=(...args)=>window.__ctaEvents.push(args);
+  document.addEventListener('click',e=>{if(e.target.closest('a[href="contact.html#project-brief"]'))e.preventDefault();},true);
  });
  const ctas=page.locator('a[href="contact.html#project-brief"]');
  const count=await ctas.count();
