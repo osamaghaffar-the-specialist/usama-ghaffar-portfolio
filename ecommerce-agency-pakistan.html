@@ -446,6 +446,19 @@ footer{padding:62px 0 28px;border-top:1px solid var(--line)}.footer-grid{display
     });
     mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileNav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';}));
   }
+  // Count consultation-link intent separately from actual enquiries and qualified leads.
+  // No customer identifiers or form contents are included in analytics.
+  document.querySelectorAll('a[href="contact.html#project-brief"]').forEach(link=>{
+    link.addEventListener('click',()=>{
+      if(typeof window.gtag==='function'){
+        window.gtag('event','contact_cta_click',{
+          source_page:'ecommerce_agency_pakistan',
+          destination:'contact_project_brief',
+          lead_status:'click_intent_only'
+        });
+      }
+    });
+  });
   document.querySelectorAll('.faq-item').forEach(item=>{
     const btn=item.querySelector('.faq-q');
     const mark=btn.querySelector('span');
