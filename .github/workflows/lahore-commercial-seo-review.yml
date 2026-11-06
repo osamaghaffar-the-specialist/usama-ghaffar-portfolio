@@ -1,0 +1,19 @@
+name: Lahore Commercial SEO Review
+on:
+  pull_request:
+    paths:
+      - seo-agency-lahore.html
+      - google-ads-agency-lahore.html
+      - digital-marketing-agency-lahore.html
+      - tools/lahore-money-pages-check.py
+      - .github/workflows/lahore-commercial-seo-review.yml
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify main money-page signals
+        run: python3 tools/lahore-money-pages-check.py
