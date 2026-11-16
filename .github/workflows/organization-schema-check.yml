@@ -1,0 +1,23 @@
+name: Verified Organization Schema
+on:
+  pull_request:
+    paths:
+      - index.html
+      - tools/verify-homepage-identity.py
+      - .github/workflows/organization-schema-check.yml
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - tools/verify-homepage-identity.py
+      - .github/workflows/organization-schema-check.yml
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify homepage JSON-LD and public profile correspondence
+        run: python3 tools/verify-homepage-identity.py
