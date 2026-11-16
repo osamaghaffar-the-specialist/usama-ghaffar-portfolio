@@ -3016,9 +3016,12 @@ img,svg,canvas{max-width:100%}
   })();
   /* ================= MINI BEES — service card icons ================= */
   (function(){
-    if(!window.THREE) return;
     const boxes = document.querySelectorAll('.miniBee');
-    if(!boxes.length) return;
+    if(!window.THREE || !boxes.length) return;
+    let initialized = false;
+    function initializeOffscreenServiceBees(){
+      if(initialized) return;
+      initialized = true;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const pearlM = new THREE.MeshPhysicalMaterial({
@@ -3165,13 +3168,28 @@ img,svg,canvas{max-width:100%}
       });
     }
     tick();
+    }
+    if(window.innerWidth < 820 && 'IntersectionObserver' in window){
+      const observer = new IntersectionObserver(entries => {
+        if(entries.some(entry => entry.isIntersecting)){
+          observer.disconnect();
+          initializeOffscreenServiceBees();
+        }
+      }, {rootMargin:'400px 0px'});
+      observer.observe(boxes[0]);
+    } else {
+      initializeOffscreenServiceBees();
+    }
   })();
 
   /* ================= ROAMING BEE — Featured Work section ================= */
   (function(){
-    if(!window.THREE) return;
     const wrapEl = document.getElementById('roamBee');
-    if(!wrapEl) return;
+    if(!window.THREE || !wrapEl) return;
+    let initialized = false;
+    function initializeOffscreenFeaturedBee(){
+      if(initialized) return;
+      initialized = true;
     const canvas = wrapEl.querySelector('canvas');
     const container = document.querySelector('#featured-work .wrap');
     const rightCard = document.querySelector('#featured-work .case-card-wrap:nth-child(3)');
@@ -3392,6 +3410,19 @@ img,svg,canvas{max-width:100%}
       r.render(scene, cam);
     }
     tick();
+    }
+    const featuredSection = document.getElementById('featured-work');
+    if(window.innerWidth < 820 && featuredSection && 'IntersectionObserver' in window){
+      const observer = new IntersectionObserver(entries => {
+        if(entries.some(entry => entry.isIntersecting)){
+          observer.disconnect();
+          initializeOffscreenFeaturedBee();
+        }
+      }, {rootMargin:'400px 0px'});
+      observer.observe(featuredSection);
+    } else {
+      initializeOffscreenFeaturedBee();
+    }
   })();
 </script>
 <script>
