@@ -40,7 +40,7 @@ jobs:
           done
       - name: Compare main versus PR preview on mobile
         run: node tools/hero-mobile-review.mjs
-      - name: Lighthouse mobile matched-environment comparison
+      - name: Verify offscreen bee renderers initialize after scrolling\n        run: node tools/mobile-offscreen-webgl-check.mjs\n      - name: Lighthouse mobile matched-environment comparison
         shell: bash
         run: |
           mkdir -p hero-review-output/lighthouse
