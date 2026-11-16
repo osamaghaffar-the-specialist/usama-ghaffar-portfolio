@@ -1,5 +1,9 @@
 name: Production SEO Smoke Check
 on:
+  pull_request:
+    paths:
+      - tools/production-seo-smoke.py
+      - .github/workflows/production-seo-smoke.yml
   schedule:
     - cron: '45 4 * * 1'
   workflow_dispatch:
