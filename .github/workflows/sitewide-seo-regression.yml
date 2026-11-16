@@ -1,0 +1,30 @@
+name: Sitewide SEO Regression
+on:
+  pull_request:
+    paths:
+      - '*.html'
+      - sitemap.xml
+      - robots.txt
+      - tools/sitewide-seo-check.py
+      - .github/workflows/sitewide-seo-regression.yml
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - sitemap.xml
+      - robots.txt
+      - tools/sitewide-seo-check.py
+      - .github/workflows/sitewide-seo-regression.yml
+  schedule:
+    - cron: '15 4 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify sitemap, metadata and internal links
+        run: python3 tools/sitewide-seo-check.py
