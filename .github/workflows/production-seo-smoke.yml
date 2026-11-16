@@ -1,0 +1,15 @@
+name: Production SEO Smoke Check
+on:
+  schedule:
+    - cron: '45 4 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production-health:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check live HTTPS, main pages, canonicals, robots, sitemap
+        run: python3 tools/production-seo-smoke.py
