@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate first-party evidence, service paths and contact CTAs
-        run: python3 -m unittest discover -s tools -p 'test-lahore-evidence.py' -v
+        run: python3 tools/test-lahore-evidence.py
