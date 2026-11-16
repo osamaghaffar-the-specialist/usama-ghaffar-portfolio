@@ -78,7 +78,7 @@ def main():
 
     root_pages = {p.name for p in ROOT.glob("*.html")
                   if p.name != "404.html"
-                  and not re.fullmatch(r"google[0-9a-f]{16}\\.html", p.name)}
+                  and not re.fullmatch(r"google[0-9a-f]{16}[.]html", p.name)}
     for p in sorted(root_pages - sitemap_paths):
         errors.append(f"Content page missing from sitemap: {p}")
     for p in sorted(sitemap_paths - root_pages):
