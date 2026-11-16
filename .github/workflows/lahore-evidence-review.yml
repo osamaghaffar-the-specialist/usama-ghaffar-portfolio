@@ -1,0 +1,20 @@
+name: Lahore Commercial Evidence Review
+on:
+  pull_request:
+    paths:
+      - seo-agency-lahore.html
+      - google-ads-agency-lahore.html
+      - digital-marketing-agency-lahore.html
+      - blog.html
+      - tools/test-lahore-evidence.py
+      - .github/workflows/lahore-evidence-review.yml
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate first-party evidence, service paths and contact CTAs
+        run: python3 tools/test-lahore-evidence.py
