@@ -22,7 +22,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
 <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
-<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous"/>
 <script id="homepage-entity-schema" type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2660,8 +2659,8 @@ img,svg,canvas{max-width:100%}
   <a href="b2b-lead-generation-agency-pakistan.html">B2B Lead Generation</a>
 </div>
 </footer>
-<!-- Three.js is preloaded from the head, then executed here after the page markup. -->
-<script crossorigin="anonymous" fetchpriority="high" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Three.js runs after markup; do not compete with critical page render via head preload. -->
+<script crossorigin="anonymous" fetchpriority="auto" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
     const canvas = document.getElementById('beeCanvas');
