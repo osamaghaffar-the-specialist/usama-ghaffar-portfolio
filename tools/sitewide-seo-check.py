@@ -91,7 +91,7 @@ def main():
         page = Page()
         source = (ROOT / path).read_text(encoding="utf-8")
         page.feed(source)
-        if re.search(r"linkedin\\.com/in/usama-ghaffar(?:[\\\"\\/\\?\\#]|$)", source, re.I):
+        if "linkedin.com/in/usama-ghaffar" in source.lower():
             errors.append(f"{path}: legacy LinkedIn URL remains; use the current founder profile")
         parsed[path] = page
         if not page.title.strip():
