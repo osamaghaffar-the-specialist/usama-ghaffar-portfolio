@@ -76,6 +76,36 @@ def main():
     except Exception as exc:
         errors.append(f"HTTP upgrade: {type(exc).__name__}: {exc}")
 
+    # A 23 Nov official GSC inspection still lists the historical GitHub Pages URL
+    # as Google-selected canonical for the Pakistan PPC page, last crawled 20 Oct.
+    # Verify the ACTUAL legacy HTTP redirect separately from Google's cached verdict.
+    legacy = ("https://osamaghaffar-the-specialist.github.io/"
+              "usama-ghaffar-portfolio/google-ads-agency-pakistan.html")
+    target = BASE + "/google-ads-agency-pakistan.html"
+    try:
+        # NoRedirect exposes the real first-hop 301/308 rather than hiding it.
+        try:
+            status, final, _ = request(legacy, follow=False)
+        except HTTPError as exc:
+            status = exc.code
+            final = exc.headers.get("Location", "")
+        if status not in (301, 308):
+            errors.append(f"Old GitHub Pages canonical did not redirect permanently: HTTP {status}")
+        else:
+            # HTTP Location may be absolute, or a legal relative URL.
+            from urllib.parse import urljoin
+            redirect_to = urljoin(legacy, final)
+            if redirect_to != target:
+                errors.append(f"Legacy Google Ads page redirected to unexpected URL: {redirect_to}")
+            else:
+                end_status, end_url, _ = request(legacy, follow=True)
+                if end_status != 200 or end_url != target:
+                    errors.append(f"Legacy redirect chain ended at {end_url} with {end_status}")
+                else:
+                    print("OK historical GitHub Pages page permanently redirects to custom canonical")
+    except Exception as exc:
+        errors.append(f"Legacy canonical HTTP check: {type(exc).__name__}: {exc}")
+
     if errors:
         print("FAILED checks:")
         for err in errors:
