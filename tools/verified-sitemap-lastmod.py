@@ -10,6 +10,11 @@ EXPECTED={
   "https://beemarketingagency.work/digital-marketing-agency-lahore.html":"2026-11-16",
   "https://beemarketingagency.work/seo-agency-lahore.html":"2026-11-16",
   "https://beemarketingagency.work/google-ads-agency-lahore.html":"2026-11-16",
+  "https://beemarketingagency.work/ecommerce-agency-pakistan.html":"2026-11-04",
+  "https://beemarketingagency.work/seo-agency-pakistan.html":"2026-11-06",
+  "https://beemarketingagency.work/google-ads-agency-pakistan.html":"2026-11-06",
+  "https://beemarketingagency.work/digital-marketing-agency-gulberg-lahore.html":"2026-11-06",
+  "https://beemarketingagency.work/digital-marketing-agency-lake-city-lahore.html":"2026-11-06",
 }
 NS={"sm":"http://www.sitemaps.org/schemas/sitemap/0.9"}
 def main():
@@ -30,6 +35,6 @@ def main():
         assert seen.get(url)==stamp, f"Missing verified lastmod: {url}"
         path=urlsplit(url).path.lstrip("/")
         assert (ROOT/path).is_file(),f"Missing corresponding source page: {url}"
-    print(f"PASS {len(seen)} canonical sitemap URLs; {len(EXPECTED)} historically verified November 16 changes")
+    print(f"PASS {len(seen)} canonical sitemap URLs; {len(EXPECTED)} verified Git-based content modification dates")
 if __name__=="__main__":
     main()
