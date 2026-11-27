@@ -89,7 +89,10 @@ def main():
     parsed = {}
     for path in sorted(root_pages):
         page = Page()
-        page.feed((ROOT / path).read_text(encoding="utf-8"))
+        source = (ROOT / path).read_text(encoding="utf-8")
+        page.feed(source)
+        if re.search(r"linkedin\\.com/in/usama-ghaffar(?:[\\\"\\/\\?\\#]|$)", source, re.I):
+            errors.append(f"{path}: legacy LinkedIn URL remains; use the current founder profile")
         parsed[path] = page
         if not page.title.strip():
             errors.append(f"{path}: missing title")
