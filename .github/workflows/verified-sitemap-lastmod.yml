@@ -1,0 +1,23 @@
+name: Verified Sitemap Freshness
+on:
+  pull_request:
+    paths:
+      - sitemap.xml
+      - tools/verified-sitemap-lastmod.py
+      - .github/workflows/verified-sitemap-lastmod.yml
+  push:
+    branches: [main]
+    paths:
+      - sitemap.xml
+      - tools/verified-sitemap-lastmod.py
+      - .github/workflows/verified-sitemap-lastmod.yml
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate verified sitemap lastmod values
+        run: python3 tools/verified-sitemap-lastmod.py
