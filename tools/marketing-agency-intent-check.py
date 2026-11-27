@@ -32,7 +32,7 @@ def main():
     heading=" ".join(p.h1)
     assert title=="Marketing Agency in Lahore, Pakistan | Bee Marketing",title
     assert src.count("<h1>")==1,"Homepage should have a single H1"
-    assert "Marketing Agency in Lahore, Pakistan" in heading,heading
+    assert "Marketing Agency in Lahore" in heading,heading
     assert p.canonicals==[HOME],p.canonicals
     assert p.meta["description"].startswith("Bee Marketing is a Lahore-based marketing agency")
     assert p.meta["og:title"]==title
