@@ -33,11 +33,11 @@ def main():
     assert title=="Marketing Agency in Lahore, Pakistan | Bee Marketing",title
     assert src.count("<h1>")==1,"Homepage should have a single H1"
     assert "Digital Marketing Agency in Pakistan" in heading,heading
-    assert "Marketing Agency · Lahore, Pakistan" in src
+    assert "marketing agency based in Lahore, Pakistan" in src
     assert p.canonicals==[HOME],p.canonicals
     assert p.meta["description"].startswith("Bee Marketing is a Lahore-based marketing agency")
     assert p.meta["og:title"]==title
-    assert "Bahria Town, Lahore" in src
+    assert "digital-marketing-agency-lahore.html" in src
     for target in ("seo-agency-lahore.html","google-ads-agency-lahore.html",
                    "facebook-ads-agency-pakistan.html","ecommerce-agency-pakistan.html",
                    "contact.html#project-brief"):
