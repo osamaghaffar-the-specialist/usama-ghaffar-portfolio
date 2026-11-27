@@ -1,0 +1,18 @@
+name: Verified Heading Hierarchy Regression
+on:
+  pull_request:
+    paths:
+      - seo-agency-pakistan.html
+      - sales-growth-framework.html
+      - tools/heading-hierarchy-review.py
+      - .github/workflows/heading-hierarchy-review.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate semantic headings and preserved visual styles
+        run: python3 tools/heading-hierarchy-review.py
