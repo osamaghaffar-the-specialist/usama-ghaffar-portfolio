@@ -31,7 +31,7 @@ def main():
     title=" ".join(p.title).strip()
     heading=" ".join(p.h1)
     assert title=="Marketing Agency in Lahore, Pakistan | Bee Marketing",title
-    assert len(re.findall(r"<h1\\b",src,re.I))==1,"Homepage should have a single H1"
+    assert src.count("<h1>")==1,"Homepage should have a single H1"
     assert "Marketing Agency in Lahore, Pakistan" in heading,heading
     assert p.canonicals==[HOME],p.canonicals
     assert p.meta["description"].startswith("Bee Marketing is a Lahore-based marketing agency")
