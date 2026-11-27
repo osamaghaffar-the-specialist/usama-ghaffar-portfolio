@@ -1,0 +1,17 @@
+name: Homepage Heading Order Regression
+on:
+  pull_request:
+    paths:
+      - index.html
+      - tools/homepage-heading-review.py
+      - .github/workflows/homepage-heading-review.yml
+permissions:
+  contents: read
+jobs:
+  headings:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate homepage semantics and CSS preservation
+        run: python3 tools/homepage-heading-review.py

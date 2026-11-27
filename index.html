@@ -761,7 +761,7 @@
   .why-icon .folder-icon-img{ width:48px; height:40px; }
   .why-copy{ padding-top:1px; }
   .why-num{font-family:var(--font-primary); color:var(--slate); font-size:0.78rem; letter-spacing:0.06em; display:block; margin-bottom:6px;}
-  .why-item h4{font-size:1.05rem; margin-bottom:8px;}
+  .why-item h3{font-size:clamp(18px,2vw,20px) !important;line-height:1.4 !important;letter-spacing:0 !important;margin-bottom:8px;}
   .why-item p{color:var(--slate); font-size:0.92rem; line-height:1.6;}
 
   /* ---- Glass analytics card (right side) ---- */
@@ -973,7 +973,7 @@
   }
   .case-industry{ font-size:0.82rem; color:var(--slate); font-weight:500; margin-bottom:8px; }
   .case-headline{
-    font-family:var(--font-primary); font-weight:700; font-size:1.12rem; line-height:1.4;
+    font-family:var(--font-primary);font-weight:var(--font-weight-medium)!important;font-size:clamp(18px,2vw,20px)!important;line-height:1.4!important;letter-spacing:0!important;
     color:#0B0E14; margin-bottom:12px;
   }
   .case-headline .sep{ color:var(--slate-dim); font-weight:500; margin:0 1px; }
@@ -1107,7 +1107,7 @@
   footer{border-top:1px solid var(--line); padding:72px 0 32px;}
   .footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:64px;}
   .footer-brand p{color:var(--slate); font-size:0.9rem; line-height:1.6; margin:16px 0 20px; max-width:280px;}
-  .footer-col h5{font-family:var(--font-primary); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--slate); margin-bottom:18px;}
+  .footer-col h3{font-family:var(--font-primary);font-size:clamp(16px,1.7vw,18px)!important;font-weight:var(--font-weight-medium)!important;line-height:1.4!important;text-transform:uppercase;letter-spacing:0.1em!important;color:var(--slate);margin-bottom:18px;}
   .footer-col a{display:block; color:var(--slate); font-size:0.9rem; margin-bottom:12px; transition:color .2s;}
   .footer-col a:hover{color:var(--paper);}
   .footer-bottom{
@@ -1287,7 +1287,7 @@
   .trusted-heading,
   .why-num,
   .case-tag,
-  .footer-col h5{
+  .footer-col h3{
     font-weight:var(--font-weight-medium) !important;
   }
 
@@ -2202,7 +2202,7 @@ img,svg,canvas{max-width:100%}
 </div>
 <div class="why-copy">
 <span class="why-num">01</span>
-<h4>Quality First Execution, not rushed Delivery</h4>
+<h3>Quality First Execution, not rushed Delivery</h3>
 <p>Every Campaign, Creative, landing page, and Automation is built with Precision, Clear Strategy, and Performance Intent — not quick work that only looks good on the surface.</p>
 </div>
 </div>
@@ -2214,7 +2214,7 @@ img,svg,canvas{max-width:100%}
 </div>
 <div class="why-copy">
 <span class="why-num">02</span>
-<h4>One Connected System across every channel</h4>
+<h3>One Connected System across every channel</h3>
 <p>Meta, Google, TikTok, LinkedIn, Snapchat, websites, creatives, and reporting work together under one growth direction, so your brand does not waste budget in disconnected efforts.</p>
 </div>
 </div>
@@ -2226,7 +2226,7 @@ img,svg,canvas{max-width:100%}
 </div>
 <div class="why-copy">
 <span class="why-num">03</span>
-<h4>AI used for Better Decisions, not Shortcuts</h4>
+<h3>AI used for Better Decisions, not Shortcuts</h3>
 <p>We use AI to Improve Research, Creative Testing, Reporting, workflow speed, and optimization — while keeping human strategy, brand judgment, and quality control at the center.</p>
 </div>
 </div>
@@ -2238,7 +2238,7 @@ img,svg,canvas{max-width:100%}
 </div>
 <div class="why-copy">
 <span class="why-num">04</span>
-<h4>Built to convert, measure, and improve</h4>
+<h3>Built to convert, measure, and improve</h3>
 <p>From the first click to the final sale, every part of the system is designed to improve conversion quality, track meaningful results, and create smarter decisions every week.</p>
 </div>
 </div>
@@ -2400,7 +2400,7 @@ img,svg,canvas{max-width:100%}
 <div class="case-shine"></div>
 <span class="case-pill">SEO + CRO + Website</span>
 <div class="case-industry">Law Firm (Personal Injury) — USA</div>
-<h4 class="case-headline">412% More Organic Leads <span class="sep">•</span> 278% Increase in Case Inquiries</h4>
+<h3 class="case-headline">412% More Organic Leads <span class="sep">•</span> 278% Increase in Case Inquiries</h3>
 <p class="case-desc">We built a high-converting website, executed an advanced SEO strategy, and implemented CRO to dominate local search and turn traffic into high-value case inquiries.</p>
 <div class="case-divider"></div>
 <div class="case-metric">
@@ -2428,7 +2428,7 @@ img,svg,canvas{max-width:100%}
 <div class="case-shine"></div>
 <span class="case-pill">Google Ads + Landing Pages</span>
 <div class="case-industry">Roofing Company — USA</div>
-<h4 class="case-headline">520% More Leads <span class="sep">•</span> 68% Lower Cost per Lead</h4>
+<h3 class="case-headline">520% More Leads <span class="sep">•</span> 68% Lower Cost per Lead</h3>
 <p class="case-desc">We launched high-intent Google Ads campaigns and built conversion-optimized landing pages that generated more qualified leads while dramatically reducing CPL.</p>
 <div class="case-divider"></div>
 <div class="case-metric">
@@ -2456,7 +2456,7 @@ img,svg,canvas{max-width:100%}
 <div class="case-shine"></div>
 <span class="case-pill">Meta Ads + Sales Funnel</span>
 <div class="case-industry">Home Services (HVAC) — USA</div>
-<h4 class="case-headline">637% More Leads <span class="sep">•</span> 3.1x Increase in Booked Jobs</h4>
+<h3 class="case-headline">637% More Leads <span class="sep">•</span> 3.1x Increase in Booked Jobs</h3>
 <p class="case-desc">Our Meta Ads strategy combined with a proven sales funnel system generated a steady flow of high-quality leads and filled their calendar weeks in advance.</p>
 <div class="case-divider"></div>
 <div class="case-metric">
@@ -2484,7 +2484,7 @@ img,svg,canvas{max-width:100%}
 <div class="case-shine"></div>
 <span class="case-pill">Local SEO + GBP Optimization</span>
 <div class="case-industry">Plumbing Business — USA</div>
-<h4 class="case-headline">793% More Local Leads <span class="sep">•</span> Top 3 Rankings for 41 Keywords</h4>
+<h3 class="case-headline">793% More Local Leads <span class="sep">•</span> Top 3 Rankings for 41 Keywords</h3>
 <p class="case-desc">We optimized their Google Business Profile, built local citations, and created geo-targeted SEO content that dominated local search and increased call volume.</p>
 <div class="case-divider"></div>
 <div class="case-metric">
@@ -2512,7 +2512,7 @@ img,svg,canvas{max-width:100%}
 <div class="case-shine"></div>
 <span class="case-pill">Full Funnel + CRO + Google Ads</span>
 <div class="case-industry">E-Commerce Store — USA</div>
-<h4 class="case-headline">315% More Revenue <span class="sep">•</span> 2.6x Higher ROAS</h4>
+<h3 class="case-headline">315% More Revenue <span class="sep">•</span> 2.6x Higher ROAS</h3>
 <p class="case-desc">We rebuilt their funnel, improved product page conversion rate, and scaled Google Ads profitably, resulting in record revenue and a significant increase in ROAS.</p>
 <div class="case-divider"></div>
 <div class="case-metric">
@@ -2615,7 +2615,7 @@ img,svg,canvas{max-width:100%}
 <p>Performance marketing and AI systems agency — ads, creative, web, software and automation under one roof.</p>
 </div>
 <div class="footer-col">
-<h5>Services</h5>
+<h3>Services</h3>
 <a href="services.html#paid-advertising">Paid Advertising</a>
 <a href="services.html#ai-creatives">AI Creatives</a>
 <a href="services.html#web-development">Web Development</a>
@@ -2623,14 +2623,14 @@ img,svg,canvas{max-width:100%}
 <a href="services.html#automations">Automations</a>
 </div>
 <div class="footer-col">
-<h5>Company</h5>
+<h3>Company</h3>
 <a href="about.html">About Us</a>
 <a href="performance-marketing.html">Portfolio</a>
 <a href="blog.html">Blog</a>
 <a href="contact.html">Contact</a>
 </div>
 <div class="footer-col">
-<h5>Get In Touch</h5>
+<h3>Get In Touch</h3>
 <a href="mailto:info@beemarketingagency.work">info@beemarketingagency.work</a>
 <a href="contact.html#project-brief">Send Project Brief</a>
 </div>
