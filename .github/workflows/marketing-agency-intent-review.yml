@@ -1,0 +1,23 @@
+name: Marketing Agency Primary Intent Review
+on:
+  pull_request:
+    paths:
+      - index.html
+      - tools/marketing-agency-intent-check.py
+      - .github/workflows/marketing-agency-intent-review.yml
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - tools/marketing-agency-intent-check.py
+      - .github/workflows/marketing-agency-intent-review.yml
+permissions:
+  contents: read
+jobs:
+  intent:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify homepage broad marketing agency targeting and trust pathways
+        run: python3 tools/marketing-agency-intent-check.py
