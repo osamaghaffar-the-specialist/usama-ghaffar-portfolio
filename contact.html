@@ -693,6 +693,18 @@ img,svg,canvas{max-width:100%}
       const form = document.getElementById('contactForm');
       const message = document.getElementById('formMessage');
       const fields = [...form.querySelectorAll('input, select, textarea')];
+      // Intent and friction diagnostics only. Do NOT send typed form data to GA4.
+      let projectBriefStarted = false;
+      const recordBriefEvent = eventName => {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', eventName, { form_id: 'contactForm' });
+        }
+      };
+      form.addEventListener('focusin', event => {
+        if (projectBriefStarted || !event.target.matches('#fullName, #workEmail, #company, #projectType, #projectBrief')) return;
+        projectBriefStarted = true;
+        recordBriefEvent('project_brief_start');
+      });
       const updateField = field => {
         const invalid = !field.checkValidity();
         field.setAttribute('aria-invalid', String(invalid));
@@ -712,6 +724,7 @@ img,svg,canvas{max-width:100%}
         if (!valid) {
           message.textContent = 'Please complete the required fields and check the email address.';
           message.className = 'form-message error';
+          recordBriefEvent('project_brief_validation_error');
           form.querySelector('[aria-invalid="true"]').focus();
           return;
         }
@@ -751,6 +764,7 @@ img,svg,canvas{max-width:100%}
         } catch (error) {
           message.textContent = 'Your message could not be sent right now. Please try again or email us directly.';
           message.className = 'form-message error';
+          recordBriefEvent('project_brief_submission_error');
           console.error('Web3Forms submission error:', error);
         } finally {
           submitButton.disabled = false;
