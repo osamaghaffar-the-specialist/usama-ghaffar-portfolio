@@ -35,6 +35,6 @@ def main():
         assert seen.get(url)==stamp, f"Missing verified lastmod: {url}"
         path=urlsplit(url).path.lstrip("/")
         assert (ROOT/path).is_file(),f"Missing corresponding source page: {url}"
-    print(f"PASS {len(seen)} canonical sitemap URLs; {len(EXPECTED)} historically verified November 16 changes")
+    print(f"PASS {len(seen)} canonical sitemap URLs; {len(EXPECTED)} verified Git-based content modification dates")
 if __name__=="__main__":
     main()
